@@ -1,0 +1,68 @@
+[
+  {
+    "interest": "Gaming",
+    "trait": "Strategic Thinking",
+    "skill": "Testing Mindset",
+    "role": "Software Tester"
+  },
+  {
+    "interest": "Music",
+    "trait": "Pattern Recognition",
+    "skill": "Data Analysis",
+    "role": "Data Analyst"
+  },
+  {
+    "interest": "Movies",
+    "trait": "Story Structuring",
+    "skill": "Content Analysis",
+    "role": "Digital Marketer"
+  },
+  {
+    "interest": "Creative Arts",
+    "trait": "Visual Design",
+    "skill": "UI Design",
+    "role": "UI/UX Designer"
+  },
+  {
+    "interest": "Social Media",
+    "trait": "Audience Insight",
+    "skill": "Campaign Analysis",
+    "role": "Digital Marketer"
+  },
+  {
+    "interest": "Helping Others",
+    "trait": "Empathy",
+    "skill": "User Support",
+    "role": "IT Support Associate"
+  },
+  {
+    "interest": "Sports",
+    "trait": "Discipline",
+    "skill": "Process Adherence",
+    "role": "QA Analyst"
+  },
+  {
+    "interest": "Writing",
+    "trait": "Clarity",
+    "skill": "Documentation",
+    "role": "Technical Writer"
+  },
+  {
+    "interest": "Technology",
+    "trait": "Curiosity",
+    "skill": "Problem Solving",
+    "role": "Data Support Associate"
+  },
+  {
+    "interest": "Entrepreneurship",
+    "trait": "Business Thinking",
+    "skill": "Product Awareness",
+    "role": "Product Support"
+  },
+  {
+    "interest": "Reading",
+    "trait": "Attention to Detail",
+    "skill": "Data Cleaning",
+    "role": "Data Analyst"
+  }
+]

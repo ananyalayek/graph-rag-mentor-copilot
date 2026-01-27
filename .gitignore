@@ -1,0 +1,6 @@
+
+.env
+mentor_sessions.db
+target/
+*.log
+.DS_Store

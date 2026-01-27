@@ -1,0 +1,501 @@
+student_id,name,skills,interests,education_level
+1,Beverly Wilson,"Data Entry, Sales, Customer Service, Communication","Music, Technology",Graduate
+2,Justin Tate,"Microsoft Office, SQL (Basics), HTML/CSS (Basics), Communication, Marketing",Movies,10th Pass
+3,Sharon Brown,"Social Media Management, Python (Basics), Data Entry","Helping Others, Entrepreneurship",Undergraduate (In Progress)
+4,Kathleen Nichols,"Graphic Design (Beginner), HTML/CSS (Basics)","Creative Arts, Entrepreneurship, Sports",10th Pass
+5,Justin Smith,"Graphic Design (Beginner), Marketing","Entrepreneurship, Music, Creative Arts",12th Pass
+6,Andrea Owens,"Sales, HTML/CSS (Basics)","Technology, Sports",Graduate
+7,Brianna Brown,"Communication, Typing","Reading, Creative Arts",Diploma Holder
+8,Ashlee Myers,"HTML/CSS (Basics), Sales, Typing","Sports, Reading",10th Pass
+9,Carrie Keith,"Social Media Management, Problem Solving, Graphic Design (Beginner), Typing, Marketing","Technology, Sports, Writing",12th Pass
+10,Terry Winters,"Data Entry, Graphic Design (Beginner)","Technology, Movies, Reading",Undergraduate (In Progress)
+11,Anne Wright,"Basic Computer Literacy, Data Entry, Customer Service, Python (Basics)",Creative Arts,12th Pass
+12,Courtney Blevins,"Java (Basics), Basic Computer Literacy, Customer Service, SQL (Basics)","Technology, Sports, Gaming",12th Pass
+13,Timothy Lopez,"SQL (Basics), Python (Basics), Microsoft Office, Video Editing (Beginner)","Reading, Helping Others",10th Pass
+14,Charles Jones,"Teamwork, Communication, Video Editing (Beginner), Problem Solving, Social Media Management","Technology, Helping Others",Graduate
+15,Rodney Mcmahon,"Teamwork, Marketing, Communication","Writing, Sports",Undergraduate (In Progress)
+16,Kelly Jordan,"Social Media Management, Graphic Design (Beginner), HTML/CSS (Basics), Communication","Sports, Movies",Undergraduate (In Progress)
+17,Michael Kelly,"Graphic Design (Beginner), Communication, Social Media Management",Entrepreneurship,Graduate
+18,Amanda Taylor,"Video Editing (Beginner), Java (Basics), HTML/CSS (Basics), Python (Basics), Graphic Design (Beginner)",Creative Arts,Diploma Holder
+19,Timothy Cherry,"Customer Service, HTML/CSS (Basics), Java (Basics), Marketing",Technology,10th Pass
+20,Scott Sparks,"Customer Service, Microsoft Office, Graphic Design (Beginner), Data Entry, Python (Basics)",Writing,Undergraduate (In Progress)
+21,Rachel Swanson,"Java (Basics), Marketing, Microsoft Office, Problem Solving","Technology, Entrepreneurship",Diploma Holder
+22,Dorothy Young,"Marketing, Graphic Design (Beginner)",Writing,Diploma Holder
+23,Elizabeth Spears,"Microsoft Office, SQL (Basics)","Technology, Movies",Diploma Holder
+24,Adam Davis,"Basic Computer Literacy, Java (Basics), Marketing, Typing, Communication","Social Media, Entrepreneurship",Graduate
+25,Whitney Bowman,"Marketing, HTML/CSS (Basics), Sales, Social Media Management","Technology, Writing, Movies",12th Pass
+26,Christian Simpson,"Communication, SQL (Basics)","Helping Others, Writing, Sports",12th Pass
+27,Melanie Mason,"Problem Solving, Basic Computer Literacy, Microsoft Office, Social Media Management","Creative Arts, Writing",Undergraduate (In Progress)
+28,Amanda Hill,"Customer Service, Python (Basics)","Reading, Music, Social Media",10th Pass
+29,Diane Fisher,"Problem Solving, Video Editing (Beginner), Java (Basics), Microsoft Office, Typing",Reading,12th Pass
+30,Joel Thomas,"Data Entry, Customer Service, Sales, Marketing","Creative Arts, Movies",Graduate
+31,Crystal Morris,"Video Editing (Beginner), HTML/CSS (Basics)",Music,10th Pass
+32,Timothy Rodriguez,"Video Editing (Beginner), Typing, Marketing, SQL (Basics), HTML/CSS (Basics)",Gaming,Undergraduate (In Progress)
+33,Eric Mccarthy,"Graphic Design (Beginner), HTML/CSS (Basics), Problem Solving, Data Entry","Sports, Creative Arts",Graduate
+34,Melissa Scott,"Sales, Graphic Design (Beginner), Problem Solving","Movies, Reading",Undergraduate (In Progress)
+35,Bruce Farley,"Social Media Management, Teamwork, Java (Basics), Sales, SQL (Basics)","Entrepreneurship, Writing",Undergraduate (In Progress)
+36,George Richard,"Microsoft Office, Teamwork, Communication, Sales, Basic Computer Literacy","Entrepreneurship, Creative Arts",Undergraduate (In Progress)
+37,Nicole Wong,"Basic Computer Literacy, SQL (Basics), Communication",Reading,Diploma Holder
+38,Sonya Swanson,"Typing, Python (Basics), Sales","Technology, Sports",Undergraduate (In Progress)
+39,Adam Grant,"Python (Basics), Customer Service, Java (Basics), Data Entry","Entrepreneurship, Sports",12th Pass
+40,Todd Castro,"Typing, SQL (Basics), Marketing","Writing, Movies, Social Media",10th Pass
+41,Brooke Bowen,"Python (Basics), Social Media Management, Graphic Design (Beginner), Video Editing (Beginner)",Creative Arts,Diploma Holder
+42,Mrs. Christine Lloyd DVM,"HTML/CSS (Basics), Data Entry, SQL (Basics), Java (Basics), Communication",Helping Others,Undergraduate (In Progress)
+43,Michael Calhoun,"Java (Basics), Problem Solving, SQL (Basics)","Creative Arts, Technology, Entrepreneurship",12th Pass
+44,Beth Gomez,"Problem Solving, Sales","Technology, Creative Arts",10th Pass
+45,James Scott,"Java (Basics), SQL (Basics), Typing, Basic Computer Literacy","Reading, Entrepreneurship, Writing",Graduate
+46,David Brown,"Marketing, Typing, Problem Solving, Sales",Sports,Undergraduate (In Progress)
+47,Denise Tucker,"HTML/CSS (Basics), Video Editing (Beginner)","Reading, Helping Others, Sports",Undergraduate (In Progress)
+48,Stephen Aguilar,"Python (Basics), Video Editing (Beginner), Sales","Entrepreneurship, Technology",Graduate
+49,Elizabeth Walton,"Sales, Video Editing (Beginner)",Creative Arts,Diploma Holder
+50,Thomas Murray,"HTML/CSS (Basics), Customer Service",Reading,Graduate
+51,Paul Kaufman,"Python (Basics), Sales, Marketing, Graphic Design (Beginner), Customer Service","Helping Others, Writing",10th Pass
+52,Marcus Adams,"Java (Basics), Communication, Problem Solving",Entrepreneurship,Graduate
+53,Miss Virginia Peterson,"SQL (Basics), Communication, Teamwork","Reading, Gaming",Diploma Holder
+54,Andrea Flores,"Video Editing (Beginner), Communication","Social Media, Creative Arts",Diploma Holder
+55,Marissa Smith,"Microsoft Office, Basic Computer Literacy","Entrepreneurship, Sports, Writing",Diploma Holder
+56,Jorge Hendrix,"Typing, Microsoft Office, Customer Service, Social Media Management, Basic Computer Literacy","Entrepreneurship, Technology",Undergraduate (In Progress)
+57,Kelly Lewis,"Customer Service, Java (Basics), Sales, Microsoft Office","Technology, Reading",12th Pass
+58,Angelica Cole,"Python (Basics), SQL (Basics), HTML/CSS (Basics), Typing","Gaming, Sports, Social Media",12th Pass
+59,Brenda Moreno,"Java (Basics), HTML/CSS (Basics), Problem Solving, Data Entry, Communication","Music, Movies, Entrepreneurship",Undergraduate (In Progress)
+60,Samuel Sosa,"Problem Solving, Basic Computer Literacy, Microsoft Office, Marketing, Social Media Management",Social Media,12th Pass
+61,Mark Perez,"Basic Computer Literacy, SQL (Basics), Problem Solving, Teamwork","Entrepreneurship, Gaming",Diploma Holder
+62,Breanna Sims,"Problem Solving, Typing, Basic Computer Literacy, Customer Service, Sales",Gaming,12th Pass
+63,Anthony Jones,"Social Media Management, Communication, Java (Basics), Basic Computer Literacy","Helping Others, Music",Undergraduate (In Progress)
+64,Eddie Estes,"Data Entry, Java (Basics)","Reading, Helping Others, Gaming",12th Pass
+65,Christina Cole,"Data Entry, HTML/CSS (Basics), Teamwork, Video Editing (Beginner)","Movies, Entrepreneurship, Writing",Graduate
+66,Paul David,"Customer Service, Java (Basics), Video Editing (Beginner), Marketing, Sales","Creative Arts, Music, Technology",Graduate
+67,Dominic Kim,"HTML/CSS (Basics), Typing, Teamwork, Video Editing (Beginner), Java (Basics)",Movies,Graduate
+68,Sabrina Carlson,"SQL (Basics), Java (Basics), Sales","Movies, Social Media",Undergraduate (In Progress)
+69,Andrea Espinoza,"Graphic Design (Beginner), Teamwork, Typing","Entrepreneurship, Social Media, Reading",Diploma Holder
+70,Rodney Mcclure,"Social Media Management, Sales, Customer Service, Data Entry, Problem Solving",Creative Arts,12th Pass
+71,Jennifer Diaz,"Python (Basics), Microsoft Office, Problem Solving",Movies,Diploma Holder
+72,Stephen Wilson,"Typing, Microsoft Office",Helping Others,Undergraduate (In Progress)
+73,Sarah Jones,"Video Editing (Beginner), Social Media Management, Graphic Design (Beginner)",Entrepreneurship,10th Pass
+74,Michael Butler,"Teamwork, Data Entry, Video Editing (Beginner)","Technology, Creative Arts",Undergraduate (In Progress)
+75,Amy Bailey,"Microsoft Office, Graphic Design (Beginner), Typing, Basic Computer Literacy","Technology, Helping Others, Sports",Diploma Holder
+76,Jason Matthews,"Typing, Marketing","Helping Others, Social Media",Undergraduate (In Progress)
+77,Darryl Winters,"Data Entry, Problem Solving, Java (Basics), SQL (Basics)","Social Media, Reading",12th Pass
+78,James Mitchell,"Graphic Design (Beginner), Video Editing (Beginner), Basic Computer Literacy, Data Entry","Entrepreneurship, Creative Arts",Graduate
+79,Amanda Porter,"Video Editing (Beginner), Communication",Helping Others,12th Pass
+80,Anthony Collins,"Microsoft Office, Customer Service, Basic Computer Literacy, Communication","Reading, Helping Others",12th Pass
+81,Stephanie Schultz,"HTML/CSS (Basics), Problem Solving","Gaming, Entrepreneurship",12th Pass
+82,Roger Frederick,"Python (Basics), Sales, Data Entry, Teamwork, Java (Basics)","Helping Others, Social Media",Graduate
+83,Ryan Stout,"Sales, Communication, Python (Basics), Marketing, Problem Solving","Music, Social Media, Helping Others",Graduate
+84,Anna Mccarthy,"Problem Solving, Sales, Basic Computer Literacy","Movies, Social Media",Graduate
+85,Heather Rowland,"Typing, Video Editing (Beginner), Marketing, Microsoft Office","Social Media, Gaming, Technology",Diploma Holder
+86,Nicole Smith,"HTML/CSS (Basics), Microsoft Office","Entrepreneurship, Music",12th Pass
+87,Harry Herring,"Sales, Typing, Marketing, Data Entry","Social Media, Music",10th Pass
+88,Alyssa Lee,"Teamwork, Marketing","Social Media, Reading, Sports",Graduate
+89,Michael Malone,"Sales, Problem Solving, Social Media Management, Communication","Social Media, Entrepreneurship",10th Pass
+90,Michael Boyer,"Problem Solving, Java (Basics), Marketing, Typing, SQL (Basics)","Music, Writing, Creative Arts",10th Pass
+91,Dr. Peter Erickson MD,"Typing, Teamwork, SQL (Basics), Data Entry",Technology,10th Pass
+92,Drew Diaz,"Sales, Data Entry, Communication, Customer Service, Java (Basics)","Gaming, Sports",10th Pass
+93,Lisa Carter,"Sales, Graphic Design (Beginner), Problem Solving, Python (Basics), Typing","Helping Others, Gaming, Movies",10th Pass
+94,Darren Huang,"Java (Basics), Customer Service, Graphic Design (Beginner), Communication, Sales",Social Media,12th Pass
+95,Cassandra Anderson,"Communication, HTML/CSS (Basics)","Writing, Reading",12th Pass
+96,Richard Gonzalez,"Data Entry, Microsoft Office, Basic Computer Literacy, Teamwork","Music, Social Media, Creative Arts",12th Pass
+97,Diane Abbott,"Problem Solving, SQL (Basics), Typing","Writing, Social Media",10th Pass
+98,Samuel Newton,"Graphic Design (Beginner), HTML/CSS (Basics)","Entrepreneurship, Creative Arts, Gaming",Undergraduate (In Progress)
+99,Lisa Lucero,"Data Entry, Basic Computer Literacy, Microsoft Office, Java (Basics), Teamwork",Social Media,Diploma Holder
+100,James Garcia,"Data Entry, Java (Basics), Basic Computer Literacy",Technology,12th Pass
+101,Joshua Buchanan,"Graphic Design (Beginner), Java (Basics)","Social Media, Entrepreneurship",12th Pass
+102,Eric Lopez,"Data Entry, Communication, Teamwork, Java (Basics), Problem Solving",Reading,Undergraduate (In Progress)
+103,Gregory Phillips,"Problem Solving, Marketing, Python (Basics), SQL (Basics)","Sports, Technology, Creative Arts",Graduate
+104,Cynthia Mason,"Basic Computer Literacy, Communication, Microsoft Office, Typing","Reading, Sports",10th Pass
+105,Amy Thomas,"Graphic Design (Beginner), Teamwork, Communication","Technology, Reading, Entrepreneurship",10th Pass
+106,Peter Miles,"Video Editing (Beginner), SQL (Basics), Java (Basics), Marketing","Technology, Sports",Diploma Holder
+107,Diana Davis,"Marketing, Data Entry","Reading, Writing, Music",Undergraduate (In Progress)
+108,Catherine Parker,"Teamwork, Microsoft Office, Data Entry, Video Editing (Beginner)","Technology, Reading",Undergraduate (In Progress)
+109,Kyle Olson,"Graphic Design (Beginner), Communication, Video Editing (Beginner), Marketing",Entrepreneurship,Graduate
+110,Kimberly Jones,"Problem Solving, Social Media Management","Reading, Helping Others",Graduate
+111,Craig Russo,"Customer Service, Marketing","Social Media, Sports, Helping Others",Graduate
+112,Kathleen Rodriguez,"Problem Solving, Java (Basics), Marketing, Customer Service","Social Media, Sports",Graduate
+113,Kelsey Jensen,"Python (Basics), Typing, Microsoft Office, Java (Basics), Marketing","Technology, Reading",Undergraduate (In Progress)
+114,Dawn Tucker,"SQL (Basics), Java (Basics), Problem Solving, Customer Service",Gaming,Graduate
+115,Joshua Lynch,"Video Editing (Beginner), Java (Basics), Sales","Gaming, Writing, Movies",12th Pass
+116,Thomas Mann MD,"Microsoft Office, Basic Computer Literacy, Typing, Customer Service","Entrepreneurship, Music, Reading",12th Pass
+117,Mike Taylor,"Sales, Social Media Management, Communication, Video Editing (Beginner)",Reading,10th Pass
+118,Harry Ramirez,"Graphic Design (Beginner), Sales, Marketing, Java (Basics)","Movies, Technology",10th Pass
+119,Crystal Patterson,"Customer Service, Data Entry, Teamwork, Java (Basics), Problem Solving","Creative Arts, Movies",Graduate
+120,Amanda Evans,"Microsoft Office, Teamwork, Typing","Creative Arts, Sports",Graduate
+121,Lindsay Gross,"HTML/CSS (Basics), Python (Basics), Social Media Management, Customer Service",Music,10th Pass
+122,Anthony Rogers,"SQL (Basics), Customer Service","Creative Arts, Movies, Sports",Graduate
+123,Jack Collins,"Basic Computer Literacy, Teamwork","Technology, Sports",Undergraduate (In Progress)
+124,April Morris,"Customer Service, Graphic Design (Beginner), Social Media Management, Marketing, Data Entry",Sports,Diploma Holder
+125,Joshua Turner,"Python (Basics), Social Media Management, SQL (Basics), Microsoft Office, HTML/CSS (Basics)","Social Media, Technology, Sports",Diploma Holder
+126,Robert Bishop,"Java (Basics), Graphic Design (Beginner)",Movies,10th Pass
+127,Courtney Shepherd,"SQL (Basics), Sales, Social Media Management, Python (Basics), Microsoft Office","Gaming, Writing",10th Pass
+128,Renee Gonzalez,"Customer Service, Java (Basics), Graphic Design (Beginner)","Social Media, Reading",12th Pass
+129,Erin Vazquez,"HTML/CSS (Basics), SQL (Basics), Graphic Design (Beginner)","Helping Others, Gaming",Undergraduate (In Progress)
+130,Nicole Patrick,"Typing, SQL (Basics), Video Editing (Beginner), Social Media Management",Sports,12th Pass
+131,Anthony Jones,"HTML/CSS (Basics), Video Editing (Beginner), Communication",Movies,Undergraduate (In Progress)
+132,Audrey Montgomery,"Teamwork, Video Editing (Beginner), Typing, SQL (Basics)","Helping Others, Creative Arts, Gaming",Diploma Holder
+133,Michael Miller,"Basic Computer Literacy, Video Editing (Beginner)","Movies, Sports, Writing",Diploma Holder
+134,Catherine Acosta,"Video Editing (Beginner), Data Entry, Sales, Typing, Problem Solving","Creative Arts, Writing",10th Pass
+135,Taylor Perez,"Microsoft Office, Marketing, Customer Service, Typing, Sales","Sports, Helping Others, Entrepreneurship",12th Pass
+136,Amy Fisher,"Python (Basics), Teamwork, Sales","Helping Others, Movies",Diploma Holder
+137,Danny Jackson,"Customer Service, Graphic Design (Beginner), Basic Computer Literacy, Python (Basics), HTML/CSS (Basics)","Entrepreneurship, Social Media, Movies",12th Pass
+138,Alexandria Butler,"Video Editing (Beginner), Sales, Social Media Management, Python (Basics)",Social Media,12th Pass
+139,Ashley Ellis,"Video Editing (Beginner), Problem Solving, Microsoft Office, Sales, SQL (Basics)",Entrepreneurship,Diploma Holder
+140,Michele Gardner,"HTML/CSS (Basics), Problem Solving","Social Media, Movies",10th Pass
+141,Angela Vega,"HTML/CSS (Basics), Microsoft Office","Writing, Creative Arts, Helping Others",Graduate
+142,Jeffrey Woodard,"Teamwork, Graphic Design (Beginner), SQL (Basics), Microsoft Office, Typing","Writing, Reading",12th Pass
+143,Danielle Marshall,"Java (Basics), Data Entry, Teamwork",Gaming,12th Pass
+144,Darlene Lawson,"HTML/CSS (Basics), Data Entry",Technology,12th Pass
+145,Perry Matthews,"Video Editing (Beginner), Communication","Social Media, Entrepreneurship, Movies",10th Pass
+146,Erica Walker,"Graphic Design (Beginner), Python (Basics), Marketing","Gaming, Music",10th Pass
+147,Jordan Goodman,"Graphic Design (Beginner), Microsoft Office","Writing, Reading, Technology",Graduate
+148,Michele Fisher,"Typing, HTML/CSS (Basics), Social Media Management, Graphic Design (Beginner)","Entrepreneurship, Helping Others",Graduate
+149,Anne Green,"Customer Service, Video Editing (Beginner), Marketing, Basic Computer Literacy, Problem Solving",Music,Diploma Holder
+150,Aaron Conner,"Video Editing (Beginner), Sales, HTML/CSS (Basics), Python (Basics), Java (Basics)",Gaming,Graduate
+151,Dawn Travis,"Data Entry, Communication, SQL (Basics)","Social Media, Writing, Gaming",10th Pass
+152,James Garcia,"Communication, Java (Basics), Data Entry, Python (Basics)","Helping Others, Creative Arts",Graduate
+153,Ryan Conley,"Microsoft Office, Teamwork, Communication, Problem Solving, Typing","Writing, Gaming, Sports",Graduate
+154,Alexander Carter,"Social Media Management, Teamwork, Basic Computer Literacy, Video Editing (Beginner)",Technology,10th Pass
+155,Krystal Schultz,"Teamwork, Basic Computer Literacy, SQL (Basics), Customer Service, Social Media Management",Reading,Diploma Holder
+156,Renee Espinoza,"Communication, Video Editing (Beginner)",Music,12th Pass
+157,Christopher Ellis,"Microsoft Office, HTML/CSS (Basics)","Technology, Sports, Reading",Undergraduate (In Progress)
+158,Tasha Lambert,"Teamwork, HTML/CSS (Basics), Communication, Sales","Gaming, Reading, Helping Others",Undergraduate (In Progress)
+159,Kelly Brewer,"Sales, Marketing, Java (Basics), Microsoft Office",Gaming,10th Pass
+160,Michele Jones,"Python (Basics), Social Media Management, Java (Basics), Data Entry","Social Media, Entrepreneurship",Undergraduate (In Progress)
+161,Zachary Hines,"Marketing, Java (Basics), Basic Computer Literacy, Problem Solving","Helping Others, Creative Arts",10th Pass
+162,Julia Thompson,"Communication, SQL (Basics), Video Editing (Beginner), Python (Basics)","Helping Others, Music, Sports",12th Pass
+163,Connie Reed,"Problem Solving, Communication",Music,10th Pass
+164,Daniel Key,"Problem Solving, Graphic Design (Beginner), Data Entry","Sports, Technology, Movies",Undergraduate (In Progress)
+165,Susan Huber,"Video Editing (Beginner), HTML/CSS (Basics)","Music, Reading, Gaming",Diploma Holder
+166,Tom Townsend,"HTML/CSS (Basics), Communication",Sports,10th Pass
+167,Suzanne Hernandez,"Sales, Data Entry, Graphic Design (Beginner)","Music, Movies",12th Pass
+168,Sarah Hardin,"Java (Basics), HTML/CSS (Basics), Basic Computer Literacy, Problem Solving, Marketing","Music, Movies",10th Pass
+169,Hayden Bowen,"Social Media Management, HTML/CSS (Basics)",Sports,Graduate
+170,Dorothy Salazar,"Communication, Social Media Management","Entrepreneurship, Technology",Graduate
+171,Connor Stewart,"Customer Service, Java (Basics), Python (Basics)",Technology,Graduate
+172,Kevin Zimmerman,"Java (Basics), Python (Basics), Data Entry, Sales","Reading, Writing",Graduate
+173,Victoria Robertson,"Problem Solving, Typing, Marketing, Video Editing (Beginner)","Writing, Entrepreneurship",Diploma Holder
+174,Stephanie Avila,"Graphic Design (Beginner), Basic Computer Literacy, Social Media Management, Marketing","Gaming, Social Media, Movies",10th Pass
+175,Joshua Compton,"Teamwork, SQL (Basics), Data Entry, Java (Basics), Sales","Reading, Music, Sports",10th Pass
+176,Christopher Alexander,"Basic Computer Literacy, Marketing",Movies,12th Pass
+177,Randy Levy,"Customer Service, Typing",Social Media,10th Pass
+178,Christopher Ray,"Social Media Management, Microsoft Office, Problem Solving, Marketing, Video Editing (Beginner)",Technology,10th Pass
+179,Jacob Barnes,"Marketing, Data Entry, Java (Basics), Basic Computer Literacy",Entrepreneurship,Graduate
+180,Madison Watson,"Sales, Social Media Management, Problem Solving","Helping Others, Music, Technology",Undergraduate (In Progress)
+181,Jasmine Flores,"Data Entry, Marketing, SQL (Basics)","Social Media, Gaming",Diploma Holder
+182,Tiffany Jones,"HTML/CSS (Basics), Graphic Design (Beginner), Java (Basics), Typing",Music,12th Pass
+183,Adam Padilla,"SQL (Basics), Marketing, Typing, Social Media Management","Writing, Helping Others, Technology",10th Pass
+184,Dr. Kenneth Mann MD,"Communication, Python (Basics)","Sports, Creative Arts, Writing",12th Pass
+185,Mr. Thomas Mitchell MD,"Typing, Basic Computer Literacy, Video Editing (Beginner), Social Media Management, Communication",Writing,Graduate
+186,Lindsey Kerr,"Python (Basics), Problem Solving",Movies,Diploma Holder
+187,William Berry,"Microsoft Office, Java (Basics), SQL (Basics), Sales",Gaming,Diploma Holder
+188,Ryan Vasquez,"SQL (Basics), Graphic Design (Beginner), Social Media Management, Basic Computer Literacy","Music, Movies, Reading",Undergraduate (In Progress)
+189,Kristen Knight,"Social Media Management, Sales, Customer Service, Python (Basics)",Helping Others,12th Pass
+190,Patricia Griffin,"Typing, Social Media Management, Python (Basics), Teamwork, Data Entry","Music, Social Media",10th Pass
+191,Larry Blackwell,"Video Editing (Beginner), HTML/CSS (Basics), Marketing",Creative Arts,Undergraduate (In Progress)
+192,Brian Patterson,"Teamwork, Sales, SQL (Basics), HTML/CSS (Basics)","Writing, Movies, Helping Others",Undergraduate (In Progress)
+193,Alison Powers,"Teamwork, SQL (Basics), Basic Computer Literacy, Java (Basics)",Movies,10th Pass
+194,Christopher Campbell,"Customer Service, HTML/CSS (Basics), Communication, Problem Solving, Sales","Writing, Music, Creative Arts",Undergraduate (In Progress)
+195,Adam Mejia,"SQL (Basics), Social Media Management, Video Editing (Beginner), HTML/CSS (Basics)","Music, Sports",10th Pass
+196,Ryan Boyd,"Customer Service, Communication","Music, Movies",Undergraduate (In Progress)
+197,Daniel Aguilar,"Typing, Basic Computer Literacy","Helping Others, Entrepreneurship",Graduate
+198,Melvin Cox,"Teamwork, SQL (Basics), Java (Basics), Customer Service, Problem Solving","Creative Arts, Helping Others",12th Pass
+199,Alyssa Brown,"Microsoft Office, SQL (Basics), Teamwork",Entrepreneurship,12th Pass
+200,Randy Rogers,"Java (Basics), Microsoft Office","Gaming, Writing",Undergraduate (In Progress)
+201,Natasha Ryan,"Customer Service, Problem Solving, Video Editing (Beginner)","Gaming, Entrepreneurship, Social Media",10th Pass
+202,Thomas Phillips,"Data Entry, SQL (Basics), Graphic Design (Beginner), Social Media Management",Helping Others,Graduate
+203,Natalie Lambert,"Basic Computer Literacy, Data Entry, Typing, Java (Basics)",Gaming,10th Pass
+204,Stacie Oconnor,"Communication, SQL (Basics), Customer Service, Graphic Design (Beginner), Marketing","Technology, Movies",Diploma Holder
+205,Diana Campbell,"Social Media Management, Teamwork, Basic Computer Literacy","Sports, Entrepreneurship, Social Media",12th Pass
+206,Elizabeth Phillips,"HTML/CSS (Basics), Problem Solving, Video Editing (Beginner), Python (Basics), Social Media Management",Technology,12th Pass
+207,James Gray,"Video Editing (Beginner), Data Entry, Teamwork, SQL (Basics), Marketing","Technology, Writing",Graduate
+208,Ruth Larson,"Communication, Marketing, Typing, Teamwork","Music, Movies, Sports",10th Pass
+209,Richard Johnson,"Python (Basics), Basic Computer Literacy, Graphic Design (Beginner), Marketing, Data Entry","Technology, Social Media, Gaming",Diploma Holder
+210,David Lin,"Marketing, Java (Basics)","Entrepreneurship, Reading, Sports",Undergraduate (In Progress)
+211,Patrick Phillips,"HTML/CSS (Basics), Marketing, Social Media Management, Python (Basics), Typing","Creative Arts, Movies, Social Media",Graduate
+212,David Butler,"Java (Basics), SQL (Basics)",Social Media,Undergraduate (In Progress)
+213,Leah Mejia,"Customer Service, Basic Computer Literacy, Typing",Technology,Undergraduate (In Progress)
+214,Charles Nelson,"Sales, Java (Basics), Data Entry","Sports, Helping Others, Writing",12th Pass
+215,Sandra Fields,"Problem Solving, Python (Basics), Customer Service, SQL (Basics)","Creative Arts, Sports",Undergraduate (In Progress)
+216,Kylie Martinez,"Problem Solving, SQL (Basics), Teamwork, Python (Basics), Communication",Reading,Graduate
+217,Matthew Avila,"Problem Solving, Customer Service",Creative Arts,Graduate
+218,Michael Park,"Graphic Design (Beginner), Data Entry",Music,Graduate
+219,Kevin Brooks,"Data Entry, Sales",Reading,Diploma Holder
+220,Daniel Smith,"Marketing, Teamwork, Java (Basics)","Creative Arts, Music, Entrepreneurship",12th Pass
+221,Ashley Mills,"Typing, Communication, HTML/CSS (Basics), Graphic Design (Beginner)","Technology, Entrepreneurship, Sports",Diploma Holder
+222,Joseph Johnson,"Customer Service, Sales, SQL (Basics)","Helping Others, Sports",Undergraduate (In Progress)
+223,Melissa Boyle,"Data Entry, Marketing","Reading, Social Media, Sports",Graduate
+224,Veronica Rodriguez,"Customer Service, Teamwork, Python (Basics), Communication",Creative Arts,Graduate
+225,Allen Martinez,"Microsoft Office, HTML/CSS (Basics), Sales, Problem Solving, Basic Computer Literacy","Gaming, Technology",12th Pass
+226,Cristina West,"Marketing, Sales","Creative Arts, Technology",Graduate
+227,Angela Jones,"Social Media Management, Java (Basics), Graphic Design (Beginner)",Entrepreneurship,10th Pass
+228,Michelle Fox,"Problem Solving, Customer Service, Teamwork",Movies,Graduate
+229,Carolyn Anderson,"HTML/CSS (Basics), Social Media Management, SQL (Basics)",Helping Others,Graduate
+230,Kenneth Washington,"Microsoft Office, Graphic Design (Beginner), Social Media Management, Typing","Music, Movies, Gaming",Diploma Holder
+231,Daniel Johnson,"Basic Computer Literacy, Communication",Entrepreneurship,Graduate
+232,Norman Knapp,"Social Media Management, Video Editing (Beginner), HTML/CSS (Basics), Java (Basics)","Entrepreneurship, Reading",Graduate
+233,Bryan Cook,"Graphic Design (Beginner), Sales, Data Entry, Video Editing (Beginner)","Social Media, Sports",Graduate
+234,Chad Reyes,"HTML/CSS (Basics), SQL (Basics), Customer Service, Sales","Technology, Gaming, Music",Graduate
+235,Brett Flores,"Graphic Design (Beginner), Problem Solving, Data Entry, Video Editing (Beginner)","Social Media, Music",10th Pass
+236,Tyler Johnson,"HTML/CSS (Basics), Java (Basics), Data Entry",Movies,Diploma Holder
+237,Jeanette Whitehead,"Basic Computer Literacy, Sales, Teamwork, Java (Basics), Typing","Gaming, Helping Others, Music",12th Pass
+238,Kyle Johnson,"Python (Basics), Microsoft Office, Data Entry, Basic Computer Literacy",Reading,Undergraduate (In Progress)
+239,Timothy Young,"Java (Basics), Data Entry",Creative Arts,Diploma Holder
+240,Mark Mullen,"Graphic Design (Beginner), Marketing, Basic Computer Literacy, Teamwork, Python (Basics)","Writing, Social Media, Movies",12th Pass
+241,Joshua Sanders,"Problem Solving, Marketing, Social Media Management, Data Entry, HTML/CSS (Basics)",Gaming,10th Pass
+242,David Rodriguez,"Typing, Graphic Design (Beginner)",Entrepreneurship,Diploma Holder
+243,Caleb Hunt,"Teamwork, Problem Solving, Typing, Basic Computer Literacy","Movies, Gaming",10th Pass
+244,Wayne Young,"Customer Service, Marketing",Reading,Graduate
+245,Stacie Mccoy,"Social Media Management, Communication, Video Editing (Beginner), Python (Basics)","Gaming, Movies",Graduate
+246,Michael Brock,"Communication, HTML/CSS (Basics), Microsoft Office, Typing","Technology, Gaming, Reading",12th Pass
+247,Lori Miller,"Typing, Social Media Management, Java (Basics)","Social Media, Technology",Graduate
+248,Melanie Turner,"Sales, Marketing, HTML/CSS (Basics)","Music, Entrepreneurship, Gaming",12th Pass
+249,Adam Garcia,"Basic Computer Literacy, SQL (Basics), Sales","Movies, Helping Others, Writing",Diploma Holder
+250,Elizabeth Walter,"Problem Solving, Basic Computer Literacy, Teamwork, Sales","Creative Arts, Movies, Music",12th Pass
+251,Molly Shah,"Graphic Design (Beginner), Teamwork, Microsoft Office, Social Media Management","Sports, Social Media",Undergraduate (In Progress)
+252,Andrea Collins,"SQL (Basics), Video Editing (Beginner), Communication, HTML/CSS (Basics)","Music, Movies",12th Pass
+253,Cheryl Moore,"Video Editing (Beginner), Typing",Helping Others,Graduate
+254,Thomas Campbell II,"HTML/CSS (Basics), Basic Computer Literacy, SQL (Basics), Communication, Java (Basics)","Helping Others, Movies",12th Pass
+255,Diane Dennis,"HTML/CSS (Basics), Java (Basics), Data Entry, Social Media Management, Basic Computer Literacy","Technology, Social Media, Movies",Undergraduate (In Progress)
+256,Robert Harmon,"Sales, Python (Basics)","Technology, Helping Others, Gaming",12th Pass
+257,Julie Hill,"Teamwork, Customer Service, Communication, Data Entry, Marketing",Creative Arts,Diploma Holder
+258,Mark Everett,"Marketing, SQL (Basics)",Movies,Undergraduate (In Progress)
+259,Daniel Beasley,"Graphic Design (Beginner), Video Editing (Beginner)","Helping Others, Creative Arts, Sports",Graduate
+260,Justin Rodriguez,"Python (Basics), Social Media Management, Communication, Data Entry","Reading, Entrepreneurship",Graduate
+261,Lauren Hernandez,"Customer Service, Data Entry, HTML/CSS (Basics), Python (Basics)","Creative Arts, Technology",Graduate
+262,Nicholas Woodard,"Data Entry, Graphic Design (Beginner)",Sports,Diploma Holder
+263,Stephanie Mason,"Basic Computer Literacy, Teamwork",Social Media,10th Pass
+264,Barbara Elliott,"Data Entry, Typing","Creative Arts, Movies",Diploma Holder
+265,Tina Williamson,"Marketing, Java (Basics)","Helping Others, Social Media",12th Pass
+266,Rebecca Smith,"SQL (Basics), Python (Basics), HTML/CSS (Basics), Sales, Video Editing (Beginner)",Movies,Undergraduate (In Progress)
+267,Allen Baker,"Python (Basics), Basic Computer Literacy","Technology, Entrepreneurship",Diploma Holder
+268,Kimberly Silva,"Customer Service, Data Entry, Basic Computer Literacy","Technology, Movies",Undergraduate (In Progress)
+269,Stanley Kent,"Communication, SQL (Basics), Graphic Design (Beginner), Sales, HTML/CSS (Basics)","Entrepreneurship, Movies",12th Pass
+270,Renee Johnson,"Sales, Problem Solving, Social Media Management, Marketing, Video Editing (Beginner)","Creative Arts, Sports",Undergraduate (In Progress)
+271,Robert Collins,"Video Editing (Beginner), Communication, Java (Basics), HTML/CSS (Basics), Social Media Management","Technology, Music, Movies",Graduate
+272,Jenna Williams,"Marketing, Sales, Social Media Management, Python (Basics)","Gaming, Sports, Entrepreneurship",12th Pass
+273,Andrea Payne,"Python (Basics), Typing, Basic Computer Literacy",Technology,10th Pass
+274,Angela Brock,"HTML/CSS (Basics), Teamwork",Sports,12th Pass
+275,Carlos Francis,"Teamwork, Graphic Design (Beginner), Data Entry",Technology,Graduate
+276,Christine Rosales,"Communication, Graphic Design (Beginner), Customer Service","Movies, Helping Others",Graduate
+277,Christopher Taylor,"Problem Solving, Python (Basics), Typing, Marketing, HTML/CSS (Basics)","Social Media, Movies, Technology",10th Pass
+278,Teresa Hall,"Customer Service, Data Entry, Java (Basics), Video Editing (Beginner), Microsoft Office",Social Media,Undergraduate (In Progress)
+279,William Avila,"Customer Service, Data Entry, Video Editing (Beginner), Communication","Writing, Gaming, Reading",Undergraduate (In Progress)
+280,Shannon Kim,"Video Editing (Beginner), Graphic Design (Beginner), HTML/CSS (Basics)","Sports, Technology",Diploma Holder
+281,Sydney Fischer,"Marketing, Sales, HTML/CSS (Basics)","Social Media, Music, Creative Arts",Graduate
+282,Kathryn George,"Customer Service, Problem Solving",Sports,Diploma Holder
+283,Sharon Hopkins,"Graphic Design (Beginner), Communication, Problem Solving, Teamwork, Customer Service",Reading,Diploma Holder
+284,Edward Warren,"Basic Computer Literacy, Social Media Management, Typing","Movies, Social Media",10th Pass
+285,Elizabeth Rodriguez,"Java (Basics), Problem Solving","Writing, Sports",Diploma Holder
+286,Hannah Smith,"Social Media Management, Problem Solving, Video Editing (Beginner), Sales",Music,10th Pass
+287,Tracy Kelly,"Data Entry, Marketing","Gaming, Reading",Diploma Holder
+288,Christine Holmes,"Java (Basics), SQL (Basics), Graphic Design (Beginner), Communication, Social Media Management","Movies, Creative Arts, Helping Others",Undergraduate (In Progress)
+289,Mr. Lawrence Davis,"Data Entry, Graphic Design (Beginner), Java (Basics)","Technology, Movies",12th Pass
+290,Caitlyn Scott,"SQL (Basics), Java (Basics)","Technology, Reading",Undergraduate (In Progress)
+291,Harold Watson,"Graphic Design (Beginner), Communication, Sales",Gaming,Undergraduate (In Progress)
+292,Shaun Owens,"Sales, HTML/CSS (Basics), Basic Computer Literacy","Movies, Gaming, Helping Others",Undergraduate (In Progress)
+293,Michaela Fowler,"Problem Solving, Typing, Data Entry",Movies,12th Pass
+294,Jack Young,"Python (Basics), Video Editing (Beginner), Teamwork","Helping Others, Creative Arts, Sports",Diploma Holder
+295,Brandon Hayes,"Graphic Design (Beginner), Microsoft Office","Writing, Technology, Movies",Diploma Holder
+296,Jessica Ward,"Python (Basics), Marketing, HTML/CSS (Basics), Social Media Management",Technology,12th Pass
+297,Michael Ross,"Teamwork, Data Entry","Music, Creative Arts, Gaming",Graduate
+298,Charles Riley,"Java (Basics), Python (Basics), Graphic Design (Beginner), SQL (Basics)","Movies, Sports, Music",Diploma Holder
+299,Andrew Underwood,"Social Media Management, Python (Basics)","Music, Gaming, Movies",Graduate
+300,Terry Macdonald,"Problem Solving, Social Media Management, Communication, Graphic Design (Beginner)","Helping Others, Movies, Music",12th Pass
+301,Martin Hicks,"Social Media Management, Marketing, Teamwork, Video Editing (Beginner)","Helping Others, Creative Arts",10th Pass
+302,James Martinez,"Microsoft Office, Social Media Management, Python (Basics), Data Entry","Creative Arts, Reading",12th Pass
+303,Roberto Smith,"Python (Basics), SQL (Basics)",Creative Arts,Diploma Holder
+304,Stephen Lawson,"Typing, Microsoft Office, Basic Computer Literacy, Problem Solving","Gaming, Helping Others, Movies",Diploma Holder
+305,Lisa Henry,"Problem Solving, Graphic Design (Beginner), Teamwork, Sales",Creative Arts,Undergraduate (In Progress)
+306,John Perry,"Customer Service, Microsoft Office, Sales, Video Editing (Beginner)","Sports, Creative Arts, Gaming",Diploma Holder
+307,Zachary Patrick,"Customer Service, Graphic Design (Beginner), Basic Computer Literacy, Microsoft Office","Music, Reading",Diploma Holder
+308,Marissa Ross,"Communication, Basic Computer Literacy, Data Entry",Technology,12th Pass
+309,Nicholas Higgins,"Social Media Management, Problem Solving",Entrepreneurship,12th Pass
+310,Betty Morris,"Marketing, Problem Solving",Creative Arts,Graduate
+311,David Romero,"Python (Basics), Typing, HTML/CSS (Basics), SQL (Basics)","Helping Others, Music, Gaming",Undergraduate (In Progress)
+312,Christy Quinn,"Microsoft Office, Video Editing (Beginner)","Gaming, Sports",Graduate
+313,Russell Smith,"HTML/CSS (Basics), Video Editing (Beginner), Teamwork","Helping Others, Writing",Diploma Holder
+314,Jacob Smith,"Teamwork, SQL (Basics), Typing, Marketing",Gaming,12th Pass
+315,Dr. Donald Walker,"Sales, Problem Solving, Microsoft Office, Video Editing (Beginner), Communication","Sports, Music",Graduate
+316,Jason Smith,"Microsoft Office, Social Media Management, Typing","Creative Arts, Music",Graduate
+317,Patricia Ryan,"Java (Basics), Communication, Marketing, Python (Basics)","Technology, Music",10th Pass
+318,Mrs. Ashley Burke DDS,"Customer Service, HTML/CSS (Basics)","Social Media, Helping Others, Music",Diploma Holder
+319,Robert Whitney,"Teamwork, Marketing","Creative Arts, Social Media",Diploma Holder
+320,Elaine Mcdonald,"Sales, Java (Basics)","Gaming, Music",10th Pass
+321,Wendy Smith,"Data Entry, Problem Solving",Helping Others,Graduate
+322,Courtney Ray,"Graphic Design (Beginner), Sales, Customer Service, SQL (Basics)",Helping Others,Diploma Holder
+323,Brittany Sullivan,"Graphic Design (Beginner), Data Entry, Typing","Movies, Technology",Graduate
+324,Jennifer Jimenez,"Data Entry, SQL (Basics)","Helping Others, Entrepreneurship, Social Media",Graduate
+325,Brian Brown,"HTML/CSS (Basics), Teamwork, Sales","Writing, Gaming",12th Pass
+326,Briana Kline,"Basic Computer Literacy, Graphic Design (Beginner), Social Media Management, SQL (Basics), HTML/CSS (Basics)",Sports,Undergraduate (In Progress)
+327,Phillip Rivera,"Python (Basics), HTML/CSS (Basics), Microsoft Office, Typing, Data Entry","Creative Arts, Entrepreneurship, Reading",Graduate
+328,Sandra Fleming,"Video Editing (Beginner), Basic Computer Literacy, Sales, Teamwork, Java (Basics)","Entrepreneurship, Sports",Undergraduate (In Progress)
+329,Michael Kent,"Python (Basics), Basic Computer Literacy, Customer Service","Sports, Writing, Creative Arts",Diploma Holder
+330,Krista Freeman,"Marketing, Social Media Management, Typing","Movies, Creative Arts",Undergraduate (In Progress)
+331,Judith Reynolds,"Social Media Management, Problem Solving, Graphic Design (Beginner), Teamwork","Entrepreneurship, Gaming, Reading",Undergraduate (In Progress)
+332,Jennifer Thomas,"Java (Basics), Problem Solving, Social Media Management, Video Editing (Beginner)","Sports, Movies, Gaming",12th Pass
+333,Jared James,"Typing, HTML/CSS (Basics), Problem Solving","Helping Others, Technology",12th Pass
+334,Michael Butler,"Graphic Design (Beginner), HTML/CSS (Basics), Sales","Social Media, Helping Others, Movies",12th Pass
+335,Kelly Cruz,"Typing, Problem Solving","Entrepreneurship, Creative Arts, Movies",10th Pass
+336,Destiny Herrera,"Python (Basics), Marketing, Communication, Graphic Design (Beginner), Teamwork",Technology,12th Pass
+337,Jeffrey Harris DDS,"Typing, Communication, Problem Solving, Basic Computer Literacy","Creative Arts, Sports, Social Media",10th Pass
+338,Walter Gonzalez,"Java (Basics), Basic Computer Literacy","Helping Others, Sports, Gaming",12th Pass
+339,Donna Zimmerman,"HTML/CSS (Basics), Video Editing (Beginner), Communication","Entrepreneurship, Gaming",Graduate
+340,Crystal Pacheco,"Marketing, SQL (Basics), Video Editing (Beginner), HTML/CSS (Basics), Microsoft Office","Music, Social Media, Gaming",Undergraduate (In Progress)
+341,Kimberly Frye,"Social Media Management, Graphic Design (Beginner)","Social Media, Helping Others, Writing",Undergraduate (In Progress)
+342,Spencer Williams,"Java (Basics), Communication, Basic Computer Literacy","Writing, Entrepreneurship",Undergraduate (In Progress)
+343,Joshua Jennings,"Graphic Design (Beginner), HTML/CSS (Basics)",Movies,Undergraduate (In Progress)
+344,Ryan Caldwell,"Sales, Marketing, Python (Basics)",Writing,Graduate
+345,Samantha Gilbert,"Problem Solving, Sales","Movies, Gaming",12th Pass
+346,Dr. Arthur Boyer,"Teamwork, Video Editing (Beginner)","Music, Sports",10th Pass
+347,Andrew Wright,"Data Entry, Problem Solving, SQL (Basics), Marketing","Creative Arts, Music, Technology",10th Pass
+348,Andrea Hall,"Social Media Management, Video Editing (Beginner)",Helping Others,10th Pass
+349,Austin Mitchell,"Basic Computer Literacy, Microsoft Office, Sales","Writing, Helping Others, Movies",Undergraduate (In Progress)
+350,Mrs. Patricia Johnson,"Sales, HTML/CSS (Basics), Microsoft Office, Data Entry","Reading, Helping Others, Writing",10th Pass
+351,Corey Ibarra,"Teamwork, Marketing, Java (Basics)",Social Media,10th Pass
+352,Eric Avila,"Typing, Data Entry, Sales, Customer Service",Helping Others,Undergraduate (In Progress)
+353,Christopher Roberts,"Communication, Microsoft Office, Basic Computer Literacy, Social Media Management",Helping Others,10th Pass
+354,Angela Benton,"Java (Basics), HTML/CSS (Basics)","Entrepreneurship, Writing, Movies",Undergraduate (In Progress)
+355,Michelle Roy,"Sales, Marketing, Graphic Design (Beginner), Communication","Movies, Music",10th Pass
+356,Scott Berger,"Python (Basics), Communication, Basic Computer Literacy, Customer Service",Movies,10th Pass
+357,Steve Snyder,"Microsoft Office, Video Editing (Beginner), Sales",Technology,Diploma Holder
+358,Leslie Moore,"Teamwork, Marketing, Python (Basics), Basic Computer Literacy","Reading, Creative Arts",Graduate
+359,Frederick Carpenter Jr.,"Sales, Problem Solving, Customer Service, Basic Computer Literacy","Gaming, Movies, Writing",Graduate
+360,Amanda Rios,"Data Entry, Communication, Customer Service, Problem Solving, Social Media Management","Writing, Sports, Music",12th Pass
+361,Jacob Barnett,"Sales, Social Media Management",Helping Others,10th Pass
+362,Damon Cole,"Graphic Design (Beginner), Communication, Teamwork, Sales","Entrepreneurship, Technology, Movies",Graduate
+363,Omar Martin,"Customer Service, Python (Basics), Marketing, Graphic Design (Beginner)","Reading, Music, Entrepreneurship",10th Pass
+364,Harry Martinez,"Typing, Data Entry, Video Editing (Beginner), Basic Computer Literacy",Social Media,Graduate
+365,Kathleen Gomez,"Communication, HTML/CSS (Basics)","Writing, Creative Arts, Reading",Graduate
+366,Elizabeth Pope,"Python (Basics), Teamwork, Social Media Management, Problem Solving, Data Entry","Helping Others, Technology",Undergraduate (In Progress)
+367,Mark Peters,"Typing, Communication, Video Editing (Beginner), Sales, Social Media Management","Technology, Reading, Music",10th Pass
+368,Lawrence Cameron,"Sales, Graphic Design (Beginner), Typing, Social Media Management",Technology,12th Pass
+369,Heidi Neal,"Python (Basics), Basic Computer Literacy, Typing",Reading,12th Pass
+370,Jessica Nelson,"SQL (Basics), Communication, Teamwork, Java (Basics), Sales","Technology, Reading, Social Media",10th Pass
+371,Gabriela Miller,"Java (Basics), Teamwork, Data Entry",Sports,Undergraduate (In Progress)
+372,Mr. Brian Brown,"Video Editing (Beginner), Microsoft Office, SQL (Basics), Marketing, Java (Basics)","Technology, Music, Writing",Graduate
+373,John Knight,"Social Media Management, Teamwork",Social Media,Graduate
+374,David Hawkins,"Java (Basics), Marketing, HTML/CSS (Basics)","Gaming, Creative Arts",10th Pass
+375,Mr. Daniel Luna DDS,"Java (Basics), Typing",Social Media,Diploma Holder
+376,Thomas Hicks,"Java (Basics), Graphic Design (Beginner)","Entrepreneurship, Social Media",Diploma Holder
+377,Kara Potts,"Java (Basics), HTML/CSS (Basics), Sales, Data Entry, Microsoft Office",Technology,Undergraduate (In Progress)
+378,Keith Petersen,"Sales, Basic Computer Literacy, Video Editing (Beginner)","Entrepreneurship, Technology",Graduate
+379,Brittany Obrien,"Marketing, Customer Service","Entrepreneurship, Writing, Helping Others",Diploma Holder
+380,Shelley Leach,"SQL (Basics), Video Editing (Beginner), Java (Basics)",Movies,Undergraduate (In Progress)
+381,Alisha Thomas,"SQL (Basics), Python (Basics)","Movies, Reading",Diploma Holder
+382,Jason Wilkinson,"Graphic Design (Beginner), Social Media Management, Microsoft Office","Social Media, Gaming",Diploma Holder
+383,Kathryn Howell,"Data Entry, Typing","Social Media, Technology, Music",Undergraduate (In Progress)
+384,Brian Young,"Communication, Java (Basics), SQL (Basics), Marketing, Microsoft Office","Technology, Sports, Writing",Undergraduate (In Progress)
+385,Linda Mejia,"Data Entry, Typing, Python (Basics), Social Media Management, Sales","Helping Others, Music, Gaming",Undergraduate (In Progress)
+386,Alex Allen,"Communication, Java (Basics), Graphic Design (Beginner), Video Editing (Beginner)","Social Media, Writing, Helping Others",12th Pass
+387,Jeremy Hawkins,"Typing, Communication, Microsoft Office, Data Entry","Writing, Music",10th Pass
+388,Erica Mckenzie,"Data Entry, Java (Basics), Problem Solving, Python (Basics)",Reading,Diploma Holder
+389,Lindsey Jones,"Video Editing (Beginner), Communication, Java (Basics)","Music, Technology, Creative Arts",10th Pass
+390,Laura Caldwell,"Graphic Design (Beginner), Basic Computer Literacy, Microsoft Office, HTML/CSS (Basics), Marketing","Helping Others, Social Media, Movies",12th Pass
+391,James Morales,"Video Editing (Beginner), Python (Basics), Communication, Microsoft Office","Movies, Music",10th Pass
+392,Michael Gonzalez,"Marketing, Graphic Design (Beginner), Microsoft Office","Entrepreneurship, Reading, Social Media",12th Pass
+393,Anne Owen,"Typing, Graphic Design (Beginner)","Music, Writing, Gaming",Undergraduate (In Progress)
+394,Elizabeth Alvarez,"Social Media Management, Communication, Graphic Design (Beginner)",Helping Others,12th Pass
+395,Roger Nelson,"Social Media Management, SQL (Basics), Microsoft Office, HTML/CSS (Basics), Sales","Writing, Entrepreneurship, Technology",Graduate
+396,Jeffrey Andrews,"HTML/CSS (Basics), Communication, Python (Basics), SQL (Basics)",Entrepreneurship,10th Pass
+397,Scott Holloway,"Teamwork, Microsoft Office, Typing",Writing,12th Pass
+398,Brittany Norton,"Communication, Customer Service, Social Media Management","Social Media, Writing, Reading",Diploma Holder
+399,Keith Mcgrath,"Marketing, Communication, Basic Computer Literacy, Typing, Social Media Management","Entrepreneurship, Music, Reading",12th Pass
+400,Daniel Thomas,"Social Media Management, Java (Basics), Marketing, Python (Basics), SQL (Basics)","Entrepreneurship, Technology, Creative Arts",Undergraduate (In Progress)
+401,Rebecca Newton,"Social Media Management, Communication, Data Entry, Basic Computer Literacy, Teamwork","Writing, Music",10th Pass
+402,Anne Garcia,"Sales, Customer Service, Python (Basics)",Technology,Diploma Holder
+403,Bryan Munoz,"Customer Service, Teamwork, Basic Computer Literacy, HTML/CSS (Basics), Marketing","Technology, Music, Gaming",10th Pass
+404,Scott York,"Teamwork, Social Media Management, Sales, Marketing",Sports,Graduate
+405,Daniel Woods,"Customer Service, Communication","Sports, Social Media, Gaming",Undergraduate (In Progress)
+406,Ricky Austin,"Typing, Video Editing (Beginner), Marketing","Reading, Entrepreneurship, Movies",Undergraduate (In Progress)
+407,Lisa Berry,"Typing, Video Editing (Beginner), Java (Basics), Problem Solving, Sales","Movies, Sports",12th Pass
+408,James Sandoval,"Java (Basics), Teamwork, SQL (Basics)","Creative Arts, Movies, Sports",12th Pass
+409,Robert Ayala DVM,"SQL (Basics), Video Editing (Beginner), Python (Basics)","Technology, Movies, Gaming",Diploma Holder
+410,Mr. Steven Lawrence DDS,"Typing, Java (Basics)","Writing, Social Media",12th Pass
+411,Wanda Park,"Social Media Management, Basic Computer Literacy, Python (Basics), Data Entry, Microsoft Office",Gaming,Undergraduate (In Progress)
+412,Cassidy Walters,"Python (Basics), Graphic Design (Beginner), Basic Computer Literacy, SQL (Basics)",Sports,12th Pass
+413,William Miller,"HTML/CSS (Basics), Basic Computer Literacy, Sales, Video Editing (Beginner), Python (Basics)","Sports, Reading, Social Media",Diploma Holder
+414,Matthew Smith,"SQL (Basics), Teamwork, Customer Service, Graphic Design (Beginner)","Gaming, Technology, Music",Graduate
+415,Christopher Galloway,"Data Entry, SQL (Basics), Graphic Design (Beginner), Teamwork","Reading, Gaming, Social Media",10th Pass
+416,Shane Coleman,"Microsoft Office, Video Editing (Beginner), Customer Service, Teamwork, Problem Solving","Music, Social Media, Helping Others",12th Pass
+417,Michael Williams,"Communication, Graphic Design (Beginner), Problem Solving, Java (Basics)",Gaming,Graduate
+418,Amanda Jenkins,"Basic Computer Literacy, Python (Basics), Social Media Management, Java (Basics)",Music,12th Pass
+419,Frank Nelson,"Sales, Marketing, Python (Basics), Microsoft Office, Graphic Design (Beginner)","Writing, Technology, Helping Others",Diploma Holder
+420,Matthew Reyes,"Problem Solving, Sales, Data Entry, Basic Computer Literacy, Communication","Music, Movies, Sports",Diploma Holder
+421,Patrick Holland,"Python (Basics), Teamwork, Basic Computer Literacy",Music,Undergraduate (In Progress)
+422,Brandi Parker,"Graphic Design (Beginner), Data Entry, Sales",Entrepreneurship,Diploma Holder
+423,Keith White,"Java (Basics), SQL (Basics)",Writing,10th Pass
+424,Ryan White,"Marketing, Microsoft Office, Java (Basics)",Entrepreneurship,Graduate
+425,Brian Stanley,"Typing, Basic Computer Literacy, Video Editing (Beginner), Marketing, Python (Basics)",Movies,12th Pass
+426,Joshua Morrow,"Java (Basics), Customer Service","Helping Others, Technology",Diploma Holder
+427,Tracey Drake,"Java (Basics), Communication, SQL (Basics), Basic Computer Literacy","Technology, Entrepreneurship, Creative Arts",12th Pass
+428,Wesley Parker,"Social Media Management, SQL (Basics)",Movies,12th Pass
+429,Brian Williams,"Customer Service, Data Entry",Technology,12th Pass
+430,Brittany Hudson,"Python (Basics), Typing, Marketing, Social Media Management",Reading,12th Pass
+431,Benjamin Zimmerman,"Social Media Management, Customer Service","Social Media, Movies",Undergraduate (In Progress)
+432,Laura Williams,"Microsoft Office, SQL (Basics), Customer Service, HTML/CSS (Basics)","Technology, Social Media, Writing",Undergraduate (In Progress)
+433,James Townsend,"Typing, Graphic Design (Beginner), Communication","Reading, Creative Arts",Undergraduate (In Progress)
+434,Tony Wilson,"Sales, Python (Basics), Teamwork, Typing, Video Editing (Beginner)","Creative Arts, Music",Graduate
+435,Austin Floyd,"Communication, Problem Solving","Music, Helping Others",10th Pass
+436,Rebecca Burns,"Graphic Design (Beginner), HTML/CSS (Basics), Data Entry","Writing, Creative Arts",Diploma Holder
+437,Ashley Holden,"Customer Service, SQL (Basics)","Reading, Social Media",Graduate
+438,Vicki Hopkins,"Social Media Management, Microsoft Office, Teamwork, Graphic Design (Beginner), Python (Basics)",Sports,10th Pass
+439,Adam Wilson,"Communication, Social Media Management, Basic Computer Literacy, Microsoft Office, Problem Solving",Creative Arts,10th Pass
+440,Omar Frost,"HTML/CSS (Basics), Teamwork, Java (Basics)","Entrepreneurship, Movies",Diploma Holder
+441,Mr. Gary Madden,"Video Editing (Beginner), SQL (Basics)",Creative Arts,Undergraduate (In Progress)
+442,Ashley Pratt,"Python (Basics), Customer Service, Marketing, Data Entry, Video Editing (Beginner)","Social Media, Gaming, Creative Arts",Diploma Holder
+443,John Kim,"Basic Computer Literacy, Data Entry, Problem Solving",Helping Others,Diploma Holder
+444,Allen Crane,"Social Media Management, Customer Service, Data Entry","Entrepreneurship, Sports, Helping Others",12th Pass
+445,Nathaniel Elliott,"Typing, Problem Solving, Data Entry, Customer Service","Social Media, Music, Creative Arts",Graduate
+446,Mary Castaneda,"Teamwork, HTML/CSS (Basics), SQL (Basics)",Social Media,Undergraduate (In Progress)
+447,Thomas Delacruz,"Java (Basics), Video Editing (Beginner), SQL (Basics), Marketing","Reading, Helping Others",10th Pass
+448,Michael Dean,"Marketing, Typing, HTML/CSS (Basics)","Social Media, Helping Others",Diploma Holder
+449,James Ramirez,"Python (Basics), SQL (Basics), Communication, Sales",Sports,Undergraduate (In Progress)
+450,Susan Edwards,"Python (Basics), Teamwork, Typing",Technology,Diploma Holder
+451,Mario Bennett,"Data Entry, HTML/CSS (Basics)","Entrepreneurship, Helping Others",Undergraduate (In Progress)
+452,Gina Hernandez,"Video Editing (Beginner), Basic Computer Literacy, HTML/CSS (Basics)","Social Media, Sports, Movies",10th Pass
+453,Russell Banks,"HTML/CSS (Basics), Typing, Graphic Design (Beginner), Video Editing (Beginner), Communication","Technology, Reading",Undergraduate (In Progress)
+454,Ashley Fowler,"Social Media Management, Typing",Social Media,10th Pass
+455,Curtis David,"Video Editing (Beginner), Python (Basics), Data Entry, Customer Service","Sports, Social Media",Graduate
+456,Mikayla Graves,"Python (Basics), Communication, SQL (Basics), Sales","Technology, Sports",Diploma Holder
+457,John Ross,"Graphic Design (Beginner), Java (Basics), Marketing, Problem Solving, Communication",Creative Arts,Graduate
+458,Jennifer Johnson,"Microsoft Office, Marketing, Graphic Design (Beginner), Data Entry, Problem Solving","Social Media, Sports",Undergraduate (In Progress)
+459,Matthew Pittman,"Marketing, Teamwork, Problem Solving, HTML/CSS (Basics)",Gaming,Graduate
+460,John Hubbard,"HTML/CSS (Basics), Java (Basics), Python (Basics), Typing","Sports, Gaming, Technology",Graduate
+461,Dylan Reynolds,"Communication, HTML/CSS (Basics), Java (Basics), Basic Computer Literacy, Teamwork","Entrepreneurship, Social Media",10th Pass
+462,Ashley Owens,"Python (Basics), SQL (Basics), Social Media Management, Java (Basics)","Creative Arts, Music, Gaming",12th Pass
+463,Kelli Jacobs,"Java (Basics), Basic Computer Literacy, Typing, Marketing, Problem Solving","Helping Others, Entrepreneurship, Writing",10th Pass
+464,Heather Rivera MD,"Python (Basics), Social Media Management, Teamwork, Microsoft Office","Entrepreneurship, Movies, Sports",12th Pass
+465,Kelsey Gomez,"SQL (Basics), Microsoft Office, Problem Solving","Music, Writing",10th Pass
+466,Ricky Norman,"Microsoft Office, Social Media Management, Data Entry","Writing, Helping Others",Graduate
+467,Isabel Moore,"Microsoft Office, Problem Solving, Java (Basics), Customer Service",Creative Arts,12th Pass
+468,Kiara Walter,"Teamwork, Video Editing (Beginner)","Writing, Sports",12th Pass
+469,Michelle Charles,"Typing, Customer Service",Technology,10th Pass
+470,Lisa Cox,"Sales, SQL (Basics), Customer Service","Gaming, Technology",10th Pass
+471,Rachel Short,"Java (Basics), Problem Solving, Graphic Design (Beginner), Marketing","Entrepreneurship, Reading, Creative Arts",12th Pass
+472,Brenda Newman,"Marketing, Basic Computer Literacy, Graphic Design (Beginner), Customer Service, Microsoft Office","Creative Arts, Social Media",Diploma Holder
+473,Tyler Barnett,"Social Media Management, Java (Basics), Sales",Helping Others,Undergraduate (In Progress)
+474,Rebecca Hamilton,"HTML/CSS (Basics), Java (Basics), Customer Service","Social Media, Music, Gaming",Undergraduate (In Progress)
+475,Brad Gilmore,"Data Entry, Microsoft Office, Sales","Music, Social Media",10th Pass
+476,Mackenzie Myers,"Communication, Video Editing (Beginner)","Sports, Social Media",Diploma Holder
+477,Alison Campbell,"Basic Computer Literacy, Social Media Management, Problem Solving, Python (Basics), Video Editing (Beginner)","Movies, Gaming, Creative Arts",12th Pass
+478,Heather Carroll,"Basic Computer Literacy, Graphic Design (Beginner), Communication, Social Media Management",Music,12th Pass
+479,Ryan Banks,"Problem Solving, Sales, Video Editing (Beginner), Communication, Java (Basics)","Helping Others, Sports, Technology",10th Pass
+480,Mary Gardner,"HTML/CSS (Basics), Basic Computer Literacy, Java (Basics), Microsoft Office",Creative Arts,12th Pass
+481,Tina Butler,"Customer Service, Marketing, Microsoft Office",Helping Others,Graduate
+482,Dr. Bobby Yates,"Microsoft Office, Teamwork, Graphic Design (Beginner), Python (Basics), SQL (Basics)",Social Media,10th Pass
+483,Russell White,"HTML/CSS (Basics), Communication, Problem Solving",Creative Arts,Undergraduate (In Progress)
+484,Robin Gilmore,"SQL (Basics), Video Editing (Beginner), Communication, Microsoft Office",Music,Diploma Holder
+485,Ricky Hawkins,"HTML/CSS (Basics), Sales, Typing, Teamwork","Entrepreneurship, Writing",Undergraduate (In Progress)
+486,Cynthia Diaz,"Marketing, Data Entry, Video Editing (Beginner), Graphic Design (Beginner)",Entrepreneurship,Diploma Holder
+487,Laura Novak,"Sales, Problem Solving","Reading, Music, Gaming",10th Pass
+488,Joseph Wright,"Customer Service, Microsoft Office, SQL (Basics)","Creative Arts, Music, Writing",10th Pass
+489,Laura Odonnell,"Communication, Video Editing (Beginner), Problem Solving, HTML/CSS (Basics), Customer Service",Entrepreneurship,12th Pass
+490,Rodney Johnson,"Basic Computer Literacy, SQL (Basics), Data Entry","Sports, Social Media, Gaming",12th Pass
+491,Brenda Mcfarland,"Teamwork, Problem Solving","Writing, Technology, Movies",Diploma Holder
+492,Scott Hicks,"SQL (Basics), Typing","Music, Entrepreneurship",12th Pass
+493,Mark Walker,"Python (Basics), Communication","Entrepreneurship, Writing",Graduate
+494,Amanda Gonzalez,"Python (Basics), Communication, Java (Basics), Marketing, Basic Computer Literacy","Gaming, Social Media",Undergraduate (In Progress)
+495,Lacey Harris,"Graphic Design (Beginner), Teamwork, Java (Basics)","Social Media, Creative Arts",10th Pass
+496,Ryan Johnson,"Microsoft Office, Graphic Design (Beginner), Problem Solving, Customer Service, HTML/CSS (Basics)","Reading, Entrepreneurship, Writing",10th Pass
+497,Victoria Johnson,"Marketing, HTML/CSS (Basics)","Movies, Writing, Gaming",12th Pass
+498,Margaret Martinez,"Problem Solving, Communication, Marketing, Video Editing (Beginner), Teamwork","Technology, Reading",Diploma Holder
+499,Casey Lewis,"SQL (Basics), Social Media Management, Communication, Python (Basics), Marketing","Technology, Reading, Entrepreneurship",10th Pass
+500,Justin Gill,"Typing, Teamwork","Technology, Entrepreneurship, Gaming",Graduate

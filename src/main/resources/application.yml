@@ -1,0 +1,74 @@
+# Common configuration for all profiles
+spring:
+  application:
+    name: career-catalyst
+  # FIX 1: Make "local" the default profile so it ALWAYS loads on your machine
+  profiles:
+    active: local
+  # FIX 2: Allow Bean Overriding (Prevents the CurriculumFunction crash)
+  main:
+    allow-bean-definition-overriding: true
+
+
+# --- LOCAL DEVELOPMENT PROFILE ---
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  ai:
+    azure:
+      openai:
+        # Expect an Azure OpenAI endpoint like: https://<resource>.openai.azure.com/
+        api-key: ${AZURE_OPENAI_API_KEY}
+        endpoint: ${AZURE_OPENAI_ENDPOINT}
+
+        # 1. THE CHAT MODEL (The Talker)
+        chat:
+          options:
+            deployment-name: ${AZURE_OPENAI_CHAT_DEPLOYMENT:gpt-4o}
+            temperature: 0.7
+
+        # 2. THE EMBEDDING MODEL (The Librarian) - FIXED INDENTATION
+        embedding:
+          options:
+            deployment-name: ${AZURE_OPENAI_EMBEDDING_DEPLOYMENT:text-embedding-ada-002}
+
+    vector-store:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        initialize-schema: true
+
+  datasource:
+    # FIX 3: Hardcoded values so you don't need extra env vars for the DB
+    url: jdbc:postgresql://localhost:5432/career_catalyst
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+# --- AZURE DEPLOYMENT PROFILE ---
+---
+spring:
+  config:
+    activate:
+      on-profile: azure
+  ai:
+    azure:
+      openai:
+        api-key: ${AZURE_OPENAI_API_KEY}
+        endpoint: ${AZURE_OPENAI_ENDPOINT}
+        chat:
+          options:
+            deployment-name: "gpt-4o"
+            temperature: 0.5
+        embedding:
+          options:
+            deployment-name: "text-embedding-ada-002"
