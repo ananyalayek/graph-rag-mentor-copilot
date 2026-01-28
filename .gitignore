@@ -4,3 +4,6 @@ mentor_sessions.db
 target/
 *.log
 .DS_Store
+
+# temp test files
+tmp_test/

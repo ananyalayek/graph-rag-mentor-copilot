@@ -7,15 +7,16 @@ import csv
 from datetime import datetime
 from pathlib import Path
 import plotly.graph_objects as go
-
+import math
 try:
     from streamlit_agraph import agraph, Node, Edge, Config
 except Exception:
     agraph = None
     Node = Edge = Config = None
 
+
 st.set_page_config(
-    page_title="graph-rag-mentor-copilot",
+    page_title="MentorBridge",
     page_icon="✨",
     layout="wide",
 )
@@ -175,6 +176,14 @@ def load_profile(student_name):
         "english_comfort": row["english_comfort"],
     }
 
+def sanitize_choices(values, options):
+    if not values:
+        return []
+    option_set = set(options)
+    return [v for v in values if v in option_set]
+
+
+
 
 def compute_radar_scores(skills, interests):
     categories = ["Communication", "Tech Basics", "Problem Solving", "Creativity", "Business/Marketing"]
@@ -215,9 +224,9 @@ def render_radar_chart(skills, interests):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def render_knowledge_graph(interests):
+def render_knowledge_graph(interests, key_suffix="main"):
     if not agraph:
-        st.info("Install streamlit-agraph to view the interactive graph.")
+        st.warning("Install streamlit-agraph to view the interactive knowledge graph.")
         return
     rules = load_kg_rules()
     if not rules:
@@ -227,7 +236,7 @@ def render_knowledge_graph(interests):
     nodes = {}
     edges = []
 
-    def upsert(node_id, label, color):
+    def upsert_node(node_id, label, color):
         if node_id not in nodes:
             nodes[node_id] = Node(id=node_id, label=label, size=18, color=color)
 
@@ -238,17 +247,16 @@ def render_knowledge_graph(interests):
         role = rule.get("role", "")
         if interest_set and interest not in interest_set:
             continue
-        upsert(f"interest:{interest}", interest, "#2f80ed")
-        upsert(f"trait:{trait}", trait, "#1f7a5f")
-        upsert(f"skill:{skill}", skill, "#f6b445")
-        upsert(f"role:{role}", role, "#6f42c1")
+        upsert_node(f"interest:{interest}", interest, "#2f80ed")
+        upsert_node(f"trait:{trait}", trait, "#1f7a5f")
+        upsert_node(f"skill:{skill}", skill, "#f6b445")
+        upsert_node(f"role:{role}", role, "#6f42c1")
         edges.append(Edge(source=f"interest:{interest}", target=f"trait:{trait}", label="has core logic"))
         edges.append(Edge(source=f"trait:{trait}", target=f"skill:{skill}", label="builds"))
         edges.append(Edge(source=f"skill:{skill}", target=f"role:{role}", label="required for"))
 
     config = Config(width=700, height=420, directed=True, physics=True, hierarchical=False)
     agraph(list(nodes.values()), edges, config)
-
 
 def build_conversation_context(messages, max_turns=6):
     lines = []
@@ -317,8 +325,19 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 
+SKILL_OPTIONS = ["Communication", "Basic Computer Literacy", "Microsoft Office", "Typing", "Teamwork",
+         "Problem Solving", "Customer Service", "Sales", "Data Entry", "Python (Basics)", "Java (Basics)", "SQL (Basics)",
+         "HTML/CSS (Basics)", "Video Editing (Beginner)", "Social Media Management", "Marketing", "Graphic Design (Beginner)"]
+
+INTEREST_OPTIONS = ["Technology", "Gaming", "Creative Arts", "Social Media", "Entrepreneurship",
+         "Helping Others", "Music", "Movies", "Sports", "Writing", "Reading"]
+
 with st.sidebar:
-    st.markdown("**graph-rag-mentor-copilot**")
+    # sanitize persisted selections before widgets render
+    st.session_state["selected_skills"] = sanitize_choices(st.session_state.get("selected_skills", []), SKILL_OPTIONS)
+    st.session_state["selected_interests"] = sanitize_choices(st.session_state.get("selected_interests", []), INTEREST_OPTIONS)
+
+    st.markdown("**MentorBridge**")
     st.header("Mentor Workspace")
     st.info("Select a learner and guide them with the mentor copilot.")
 
@@ -339,10 +358,24 @@ with st.sidebar:
         st.session_state.math_comfort = profile.get("math_comfort") or 3
         st.session_state.problem_solving_confidence = profile.get("problem_solving_confidence") or 3
         st.session_state.english_comfort = profile.get("english_comfort") or 3
-        st.session_state.messages = load_messages(student_choice) or [{"role": "assistant", "content": "Mentor copilot is ready. Ask a question."}]
+        st.session_state.messages = [{"role": "assistant", "content": "Mentor copilot is ready. Ask a question."}]
 
     st.markdown("---")
     language_choice = st.radio("Language", ["English", "Hindi"], horizontal=True, key="language_choice")
+
+    st.markdown("### Learner Skills & Interests")
+    st.multiselect(
+        "Skills",
+        SKILL_OPTIONS,
+        default=sanitize_choices(st.session_state.get("selected_skills", []), SKILL_OPTIONS),
+        key="selected_skills"
+    )
+    st.multiselect(
+        "Interests",
+        INTEREST_OPTIONS,
+        default=sanitize_choices(st.session_state.get("selected_interests", []), INTEREST_OPTIONS),
+        key="selected_interests"
+    )
 
     st.markdown("### Learning Context")
     st.selectbox("AI/Data Interest", ["Low", "Medium", "High"], key="ai_data_interest")
@@ -354,20 +387,39 @@ with st.sidebar:
     st.slider("Problem Solving (1-5)", 1, 5, key="problem_solving_confidence")
     st.slider("English Comfort (1-5)", 1, 5, key="english_comfort")
 
+    if st.button("Save Learner Updates"):
+        save_profile(
+            st.session_state.get("student_name", ""),
+            st.session_state.get("education_level", "10th Pass"),
+            st.session_state.get("selected_skills", []),
+            st.session_state.get("selected_interests", []),
+            language_choice,
+            st.session_state.get("ai_data_interest"),
+            st.session_state.get("device_access"),
+            st.session_state.get("time_per_week_hours"),
+            st.session_state.get("math_comfort"),
+            st.session_state.get("problem_solving_confidence"),
+            st.session_state.get("english_comfort"),
+        )
 
-st.title("Mentor Command Center")
-st.caption("graph-rag-mentor-copilot: AI mentor copilot for AI/Data paths")
+st.title("MentorBridge")
+st.caption("MentorBridge: AI mentor copilot for AI/Data onboarding and guidance")
 
-left, right = st.columns([0.6, 0.4])
+left, right = st.columns(2)
 with left:
     st.markdown("<div class='card'><h4>Skill Bridge Radar</h4><div class='muted'>Baseline vs current strengths for the selected learner.</div></div>", unsafe_allow_html=True)
     render_radar_chart(st.session_state.get("selected_skills", []), st.session_state.get("selected_interests", []))
+
+st.caption("Download radar as PNG (from browser toolbar) or screenshot.")
+
 
 with right:
     st.markdown("<div class='card'><h4>Knowledge Graph Explorer</h4><div class='muted'>Relational paths from interests to roles.</div></div>", unsafe_allow_html=True)
     render_knowledge_graph(st.session_state.get("selected_interests", []))
 
 st.markdown("---")
+
+
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):

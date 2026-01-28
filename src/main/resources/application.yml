@@ -8,6 +8,10 @@ spring:
   # FIX 2: Allow Bean Overriding (Prevents the CurriculumFunction crash)
   main:
     allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
 
 
 # --- LOCAL DEVELOPMENT PROFILE ---
@@ -72,3 +76,18 @@ spring:
         embedding:
           options:
             deployment-name: "text-embedding-ada-002"
+
+# --- Onboarding Velocity Engine ---
+azure:
+  docintelligence:
+    endpoint: ${AZURE_DOCINTEL_ENDPOINT:}
+    key: ${AZURE_DOCINTEL_KEY:}
+
+powerautomate:
+  webhook:
+    url: ${POWER_AUTOMATE_WEBHOOK_URL:}
+
+
+server:
+  tomcat:
+    max-swallow-size: 50MB
