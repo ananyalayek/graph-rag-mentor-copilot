@@ -10,6 +10,12 @@ public class NameMatcher {
 
     public static boolean allMatch(String profileName, String a, String p, String i) {
         String base = normalize(profileName);
-        return base.equals(normalize(a)) && base.equals(normalize(p)) && base.equals(normalize(i));
+        if (base.isEmpty()) {
+            return false;
+        }
+        boolean aadhaarOk = base.equals(normalize(a));
+        boolean panOk = p == null || p.isBlank() || base.equals(normalize(p));
+        boolean incomeOk = base.equals(normalize(i));
+        return aadhaarOk && panOk && incomeOk;
     }
 }

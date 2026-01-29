@@ -13,6 +13,23 @@ spring:
       max-file-size: 50MB
       max-request-size: 50MB
 
+onboarding:
+  demo-mode: ${ONBOARDING_DEMO_MODE:false}
+
+azure:
+  docintelligence:
+    endpoint: ${AZURE_DOCINTEL_ENDPOINT:}
+    key: ${AZURE_DOCINTEL_KEY:}
+  storage:
+    connection-string: ${AZURE_STORAGE_CONNECTION_STRING:}
+    account: ${AZURE_STORAGE_ACCOUNT:}
+    key: ${AZURE_STORAGE_KEY:}
+    container: ${AZURE_STORAGE_CONTAINER:}
+
+powerautomate:
+  webhook:
+    url: ${POWER_AUTOMATE_WEBHOOK_URL:}
+
 
 # --- LOCAL DEVELOPMENT PROFILE ---
 ---
@@ -38,24 +55,13 @@ spring:
           options:
             deployment-name: ${AZURE_OPENAI_EMBEDDING_DEPLOYMENT:text-embedding-ada-002}
 
-    vector-store:
-      pgvector:
-        index-type: HNSW
-        distance-type: COSINE_DISTANCE
-        initialize-schema: true
-
-  datasource:
-    # FIX 3: Hardcoded values so you don't need extra env vars for the DB
-    url: jdbc:postgresql://localhost:5432/career_catalyst
-    username: postgres
-    password: password
-    driver-class-name: org.postgresql.Driver
-
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+databricks:
+  workspace-url: ${DATABRICKS_WORKSPACE_URL:}
+  pat: ${DATABRICKS_PAT:}
+  vector-search:
+    index: ${DATABRICKS_VECTOR_SEARCH_INDEX:}
+    text-column: ${DATABRICKS_VECTOR_SEARCH_TEXT_COLUMN:text}
+    num-results: ${DATABRICKS_VECTOR_SEARCH_NUM_RESULTS:3}
 
 
 # --- AZURE DEPLOYMENT PROFILE ---
@@ -76,17 +82,6 @@ spring:
         embedding:
           options:
             deployment-name: "text-embedding-ada-002"
-
-# --- Onboarding Velocity Engine ---
-azure:
-  docintelligence:
-    endpoint: ${AZURE_DOCINTEL_ENDPOINT:}
-    key: ${AZURE_DOCINTEL_KEY:}
-
-powerautomate:
-  webhook:
-    url: ${POWER_AUTOMATE_WEBHOOK_URL:}
-
 
 server:
   tomcat:

@@ -1,0 +1,14 @@
+[[pages]]
+path = "Chat.py"
+name = "Chat"
+icon = "💬"
+
+[[pages]]
+path = "pages/Onboarding.py"
+name = "Onboarding"
+icon = "🧾"
+
+[[pages]]
+path = "pages/MentorBridge.py"
+name = "Mentor Bridge"
+icon = "M"

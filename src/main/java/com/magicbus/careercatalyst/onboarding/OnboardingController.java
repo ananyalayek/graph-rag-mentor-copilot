@@ -18,10 +18,25 @@ public class OnboardingController {
 
     @PostMapping("/verify")
     public OnboardingResult verify(
-            @RequestParam("studentId") String studentId,
+            @RequestParam(value = "studentId", required = false) String studentId,
             @RequestParam("aadhaar") MultipartFile aadhaar,
-            @RequestParam("pan") MultipartFile pan,
-            @RequestParam("income") MultipartFile income) {
-        return onboardingService.verify(studentId, aadhaar, pan, income);
+            @RequestParam("income") MultipartFile income,
+            @RequestParam(value = "candidateName", required = false) String candidateName,
+            @RequestParam(value = "candidateAgeRange", required = false) String candidateAgeRange,
+            @RequestParam(value = "candidateEducation", required = false) String candidateEducation,
+            @RequestParam(value = "candidateLocation", required = false) String candidateLocation,
+            @RequestParam(value = "candidateInterests", required = false) String candidateInterests,
+            @RequestParam(value = "candidateSkills", required = false) String candidateSkills,
+            @RequestParam(value = "candidateLanguage", required = false) String candidateLanguage) {
+        CandidateInfo candidateInfo = new CandidateInfo(
+                candidateName,
+                candidateAgeRange,
+                candidateEducation,
+                candidateLocation,
+                candidateInterests,
+                candidateSkills,
+                candidateLanguage
+        );
+        return onboardingService.verify(studentId, aadhaar, null, income, candidateInfo);
     }
 }

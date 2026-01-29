@@ -7,14 +7,18 @@ public class OnboardingResult {
     private String studentId;
     private Map<String, DocumentExtractionResult> documents;
     private String notes;
+    private String blobPath;
+    private String blobUploadError;
 
     public OnboardingResult() {}
 
-    public OnboardingResult(boolean verified, String studentId, Map<String, DocumentExtractionResult> documents, String notes) {
+    public OnboardingResult(boolean verified, String studentId, Map<String, DocumentExtractionResult> documents, String notes, String blobPath, String blobUploadError) {
         this.verified = verified;
         this.studentId = studentId;
         this.documents = documents;
         this.notes = notes;
+        this.blobPath = blobPath;
+        this.blobUploadError = blobUploadError;
     }
 
     public boolean isVerified() {
@@ -47,5 +51,21 @@ public class OnboardingResult {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getBlobPath() {
+        return blobPath;
+    }
+
+    public void setBlobPath(String blobPath) {
+        this.blobPath = blobPath;
+    }
+
+    public String getBlobUploadError() {
+        return blobUploadError;
+    }
+
+    public void setBlobUploadError(String blobUploadError) {
+        this.blobUploadError = blobUploadError;
     }
 }

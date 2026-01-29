@@ -1,12 +1,11 @@
 package com.magicbus.careercatalyst;
 
 import com.magicbus.careercatalyst.functions.CurriculumFunction.CurriculumTool;
+import com.magicbus.careercatalyst.databricks.DatabricksVectorSearchClient;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.document.Document;
-import org.springframework.ai.vectorstore.SearchRequest;
-import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
@@ -22,15 +21,15 @@ import java.util.stream.Collectors;
 public class CareerAdvisorService {
 
     private final ChatClient chatClient;
-    private final VectorStore vectorStore;
+    private final DatabricksVectorSearchClient vectorSearchClient;
     // We inject the Tool metadata so the AI knows it can use it
     private final CurriculumTool curriculumTool;
     private final String knowledgeGraphRules;
 
     public CareerAdvisorService(ChatClient.Builder chatClientBuilder,
-                                VectorStore vectorStore,
+                                DatabricksVectorSearchClient vectorSearchClient,
                                 CurriculumTool curriculumTool) {
-        this.vectorStore = vectorStore;
+        this.vectorSearchClient = vectorSearchClient;
         this.curriculumTool = curriculumTool;
         this.knowledgeGraphRules = loadKnowledgeGraphRules();
         // Build the client with default tools enabled
@@ -64,7 +63,7 @@ public class CareerAdvisorService {
      * * @param currentSkills User's existing skills
      * @param interests User's passions
      * @param educationLevel Current education status
-     * @param preferredLanguage "English" or "Hindi" (mapped to Hinglish)
+     * @param preferredLanguage "English", "Hindi", or "Marathi"
      * @param userMessage Latest user message for multi-turn chat
      * @param conversationContext Prior messages (recent history)
      * @param studentName Student display name
@@ -94,30 +93,27 @@ public class CareerAdvisorService {
 
         // --- STEP 1: RAG RETRIEVAL (The Memory) ---
         // We search the vector database for 3 students with similar profiles.
-        SearchRequest searchRequest = SearchRequest.builder()
-                .query(currentSkills + " " + interests)
-                .topK(3)
-                .similarityThreshold(0.6)
-                .build();
-
-        List<Document> similarProfiles = vectorStore.similaritySearch(searchRequest);
+        List<Document> similarProfiles = vectorSearchClient
+                .similaritySearch(currentSkills + " " + interests, 3);
 
         String ragContext = similarProfiles.stream()
                 .map(Document::getText)
                 .collect(Collectors.joining("\n---\n"));
 
         // --- STEP 2: LANGUAGE LOGIC (The Empathy) ---
-        String languageInstruction = "English (Professional but simple)";
+        String languageInstruction = "English (Professional but simple). Respond only in English.";
         if ("Hindi".equalsIgnoreCase(preferredLanguage)) {
-            languageInstruction = "Hinglish (A friendly mix of Hindi and English, common in Indian youth culture). " +
-                                  "Use encouraging phrases like 'Shaabash!', 'Bilkul sahi', or 'Tension mat lo'.";
+            languageInstruction = "Hindi (Simple, friendly, and encouraging). Respond only in Hindi. Do not mix English.";
+        } else if ("Marathi".equalsIgnoreCase(preferredLanguage)) {
+            languageInstruction = "Marathi (Simple, friendly, and encouraging). Respond only in Marathi. Do not mix English.";
         }
 
-        String mentorStyle = """
-                You are a Mentor Copilot assisting mentors (not the student directly).
-                Address the mentor in second person ("you") and keep the tone professional, warm, and supportive.
-                Provide suggested student-facing messages in short quoted blocks when helpful.
-                Ask targeted follow-up questions the mentor should ask the student.
+        String candidateStyle = """
+                You are a Magic Bus mentor copilot assisting a mentor.
+                Speak to the mentor (not the student). Use a concise, professional, and empathetic tone.
+                Your job: interpret the student's context, suggest what the mentor should ask next, and generate a roadmap the mentor can share.
+                Include actionable guidance that helps the mentor support the student effectively.
+                Do not address the student directly.
                 """;
 
         String discoveryPrompt = """
@@ -151,13 +147,12 @@ public class CareerAdvisorService {
                 {user_message}
 
                 YOUR MISSION:
-                1) Briefly summarize the student context for the mentor.
-                2) Provide 4-6 focused questions the mentor should ask next.
-                   Include questions about AI interest, location, time available, device/internet access, and preferred learning style.
-                3) Provide a short, friendly student-facing message the mentor can send (quote it).
-                4) Mention that a full career roadmap can be generated when the mentor clicks "Generate Roadmap".
-                End with one supportive line for the mentor in {language}.
-                """.formatted(mentorStyle);
+                1) Briefly summarize the candidate context for the mentor.
+                2) Provide 4-6 focused follow-up questions the mentor should ask (goals, location, time available, device/internet access, preferred learning style).
+                3) Offer 2-3 possible Magic Bus program directions or focus areas based on the profile.
+                4) Suggest a next-step roadmap outline the mentor can share.
+                End with one supportive line addressed to the mentor in the selected language.
+                """.formatted(candidateStyle);
 
         String roadmapPrompt = """
                 %s
@@ -190,7 +185,7 @@ public class CareerAdvisorService {
                 {user_message}
 
                 YOUR MISSION:
-                Create a high-impact, visual career roadmap for the mentor to review and send.
+                Create a high-impact, visual career roadmap for the candidate to follow.
                 Follow this structure strictly and keep it readable:
 
                 USER PROFILE:
@@ -215,9 +210,9 @@ public class CareerAdvisorService {
                 Create a high-impact, visual career roadmap. Follow this structure strictly and keep it readable:
 
                 ### 1. Recommended Paths 🎯
-                Suggest 2 distinct IT career paths, prioritizing AI/ML or AI-adjacent roles if the student is interested.
-                * Explain WHY in a mentor-facing tone (use {language} for the example student-facing line).
-                * Add a short student-facing summary line the mentor can send.
+                Suggest 2 distinct IT career paths, prioritizing AI/ML or AI-adjacent roles if the candidate is interested.
+                * Explain WHY in a friendly candidate-facing tone (use {language} for the example line).
+                * Add a short summary line the candidate can act on this week.
                 * Use the 'curriculumFunction' tool to fetch and list the specific training modules for these paths.
 
                 ### 2. Success-Twin (Relatability Anchor) 🤝
@@ -257,7 +252,7 @@ public class CareerAdvisorService {
                 Provide 2-3 links students can explore next (include full URLs).
 
                 End with a short, motivating punchline in {language}.
-                """.formatted(mentorStyle);
+                """.formatted(candidateStyle);
 
         String promptBody = roadmapRequested ? roadmapPrompt : discoveryPrompt;
         PromptTemplate promptTemplate = new PromptTemplate(promptBody);
