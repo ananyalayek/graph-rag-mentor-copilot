@@ -12,22 +12,27 @@ import java.util.Map;
 @Service
 public class OnboardingService {
 
+    private static final double MIN_CONFIDENCE = 0.80;
+
     private final AzureDocumentIntelligenceClient docClient;
     private final PowerAutomateNotifier notifier;
     private final StudentProfileLookup studentProfileLookup;
     private final BlobStorageService blobStorageService;
     private final boolean demoMode;
+    private final boolean skipRules;
 
     public OnboardingService(AzureDocumentIntelligenceClient docClient,
                              PowerAutomateNotifier notifier,
                              StudentProfileLookup studentProfileLookup,
                              BlobStorageService blobStorageService,
-                             @Value("${onboarding.demo-mode:false}") boolean demoMode) {
+                             @Value("${onboarding.demo-mode:false}") boolean demoMode,
+                             @Value("${onboarding.demo-skip-rules:false}") boolean skipRules) {
         this.docClient = docClient;
         this.notifier = notifier;
         this.studentProfileLookup = studentProfileLookup;
         this.blobStorageService = blobStorageService;
         this.demoMode = demoMode;
+        this.skipRules = skipRules;
     }
 
     public OnboardingResult verify(String studentId,
@@ -37,8 +42,9 @@ public class OnboardingService {
                                    CandidateInfo candidateInfo) {
         try {
             DocumentExtractionResult aadhaarResult = docClient.analyzeIdDocument(aadhaar.getBytes(), "AADHAAR");
-            DocumentExtractionResult panResult = pan == null ? new DocumentExtractionResult("", "", "", "", 0.0)
-                    : docClient.analyzeIdDocument(pan.getBytes(), "PAN");
+            boolean panProvided = pan != null;
+            DocumentExtractionResult panResult = panProvided ? docClient.analyzeIdDocument(pan.getBytes(), "PAN")
+                    : new DocumentExtractionResult("", "", "", "", 0.0);
             DocumentExtractionResult incomeResult = docClient.analyzeIncomeDocument(income.getBytes());
 
             String profileName = fetchStudentName(studentId, candidateInfo);
@@ -61,7 +67,8 @@ public class OnboardingService {
             }
             checkConfidence(studentId, "income", incomeResult.getConfidence());
 
-            VerificationDecision decision = decideEligibility(candidateInfo, aadhaarResult, incomeResult, panResult, nameMatch);
+            VerificationDecision decision = decideEligibility(candidateInfo, aadhaarResult, incomeResult,
+                    panProvided ? panResult : null, nameMatch);
             boolean verified = decision.isVerified();
             String notes = decision.reason();
             UploadResult uploadResult = uploadSubmission(studentId, candidateInfo, aadhaarResult, panResult, incomeResult, nameMatch, notes, verified);
@@ -73,7 +80,7 @@ public class OnboardingService {
     }
 
     private void checkConfidence(String studentId, String docType, double confidence) {
-        if (confidence < 0.90) {
+        if (confidence < MIN_CONFIDENCE) {
             notifier.notifyLowConfidence(studentId, docType, confidence);
         }
     }
@@ -106,40 +113,40 @@ public class OnboardingService {
                                                    DocumentExtractionResult income,
                                                    DocumentExtractionResult pan,
                                                    boolean nameMatch) {
-        if (!nameMatch) {
+        if (!nameMatch && !skipRules) {
             return VerificationDecision.needsReview("Needs-Review: name mismatch");
         }
 
-        if (aadhaar == null || aadhaar.getConfidence() < 0.90) {
+        if (!skipRules && (aadhaar == null || aadhaar.getConfidence() < MIN_CONFIDENCE)) {
             return VerificationDecision.needsReview("Needs-Review: Aadhaar confidence below threshold");
         }
-        if (income == null || income.getConfidence() < 0.90) {
+        if (!skipRules && (income == null || income.getConfidence() < MIN_CONFIDENCE)) {
             return VerificationDecision.needsReview("Needs-Review: income confidence below threshold");
         }
-        if (pan != null && pan.getConfidence() < 0.90) {
+        if (!skipRules && pan != null && pan.getConfidence() < MIN_CONFIDENCE) {
             return VerificationDecision.needsReview("Needs-Review: PAN confidence below threshold");
         }
 
         Integer ageFromDob = parseAgeFromDob(aadhaar.getDob());
-        if (ageFromDob == null) {
+        if (!skipRules && ageFromDob == null) {
             return VerificationDecision.needsReview("Needs-Review: age not detected");
         }
-        if (ageFromDob < 14 || ageFromDob > 25) {
+        if (!skipRules && (ageFromDob < 14 || ageFromDob > 25)) {
             return VerificationDecision.needsReview("Needs-Review: age outside 14-25");
         }
 
         if (candidateInfo != null && candidateInfo.ageRange() != null && !candidateInfo.ageRange().isBlank()) {
             AgeRange range = AgeRange.fromLabel(candidateInfo.ageRange());
-            if (range != null && !range.contains(ageFromDob)) {
+            if (!skipRules && range != null && !range.contains(ageFromDob)) {
                 return VerificationDecision.needsReview("Needs-Review: age range mismatch");
             }
         }
 
         Long incomeValue = parseIncome(income.getAnnualIncome());
-        if (incomeValue == null) {
+        if (!skipRules && incomeValue == null) {
             return VerificationDecision.needsReview("Needs-Review: income not detected");
         }
-        if (incomeValue > 500000L) {
+        if (!skipRules && incomeValue > 500000L) {
             return VerificationDecision.needsReview("Needs-Review: income above 5 lakhs");
         }
 
@@ -239,7 +246,8 @@ public class OnboardingService {
                                           boolean nameMatch,
                                           String notes,
                                           boolean verified) {
-        String blobName = blobStorageService.buildOnboardingBlobName(studentId);
+        String candidateName = candidateInfo == null ? "" : candidateInfo.name();
+        String blobName = blobStorageService.buildOnboardingBlobName(studentId, candidateName);
         Map<String, Object> payload = new java.util.HashMap<>();
         payload.put("studentId", studentId);
         payload.put("candidate", candidateInfo);

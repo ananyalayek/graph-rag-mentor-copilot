@@ -15,7 +15,7 @@ public class NameMatcher {
         }
         boolean aadhaarOk = base.equals(normalize(a));
         boolean panOk = p == null || p.isBlank() || base.equals(normalize(p));
-        boolean incomeOk = base.equals(normalize(i));
+        boolean incomeOk = i == null || i.isBlank() || base.equals(normalize(i));
         return aadhaarOk && panOk && incomeOk;
     }
 }

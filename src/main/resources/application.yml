@@ -2,6 +2,8 @@
 spring:
   application:
     name: career-catalyst
+  config:
+    import: "optional:file:.env[.properties]"
   # FIX 1: Make "local" the default profile so it ALWAYS loads on your machine
   profiles:
     active: local

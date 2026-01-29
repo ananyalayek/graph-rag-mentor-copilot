@@ -4,6 +4,8 @@ mentor_sessions.db
 target/
 *.log
 .DS_Store
+__pycache__/
+*.pyc
 
 # temp test files
 tmp_test/

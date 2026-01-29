@@ -1,4 +1,5 @@
 ﻿import streamlit as st
+import streamlit.components.v1 as components
 import requests
 import json
 import re
@@ -351,6 +352,39 @@ def call_backend(current_skills, interests, education_level, preferred_language,
     }
     return requests.post(API_URL, json=payload, timeout=60)
 
+def render_message(content):
+    if not content:
+        return
+    pattern = re.compile(r"```mermaid\s*(.*?)```", re.DOTALL | re.IGNORECASE)
+    parts = pattern.split(content)
+    if len(parts) == 1:
+        st.markdown(content)
+        return
+
+    counter = st.session_state.get("mermaid_counter", 0)
+    for idx, part in enumerate(parts):
+        if idx % 2 == 0:
+            if part.strip():
+                st.markdown(part)
+            continue
+
+        counter += 1
+        diagram_id = f"mermaid-{counter}"
+        components.html(
+            f"""
+            <div id="{diagram_id}" class="mermaid">
+            {part}
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+            <script>
+              mermaid.initialize({{ startOnLoad: true }});
+            </script>
+            """,
+            height=420,
+        )
+    st.session_state["mermaid_counter"] = counter
+
+
 
 def send_message(user_text, selected_skills, selected_interests, education_level, language_choice, roadmap_requested=False):
     st.session_state.messages.append({"role": "user", "content": user_text})
@@ -379,7 +413,7 @@ def send_message(user_text, selected_skills, selected_interests, education_level
                 advice = response.text
                 st.session_state.messages.append({"role": "assistant", "content": advice})
                 save_message(st.session_state.get("student_name", ""), "assistant", advice)
-                st.markdown(advice)
+                render_message(advice)
             else:
                 st.error(f"Server Error ({response.status_code}): {response.text}")
 
@@ -488,7 +522,7 @@ st.markdown("---")
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
-        st.markdown(msg["content"])
+        render_message(msg["content"])
 
 if st.button("Generate Mentor Roadmap", type="primary"):
     send_message(

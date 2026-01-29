@@ -12,6 +12,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Component
 public class AzureDocumentIntelligenceClient {
@@ -52,11 +56,19 @@ public class AzureDocumentIntelligenceClient {
 
             JsonNode documents = root.path("documents");
             if (!documents.isArray() || documents.isEmpty()) {
+                String content = root.path("content").asText("");
+                if (isIncome && !content.isBlank()) {
+                    IncomeExtraction incomeExtraction = extractIncomeFromContent(content);
+                    if (incomeExtraction != null) {
+                        return new DocumentExtractionResult("", "", "", incomeExtraction.value(), incomeExtraction.confidence());
+                    }
+                }
                 logger.warn("Document Intelligence returned no documents. body={}", trimBody(root.toString()));
                 return new DocumentExtractionResult("", "", "", "", 0.0);
             }
 
             JsonNode fields = documents.get(0).path("fields");
+            String content = root.path("content").asText("");
             String name = getFieldValue(fields, "FullName", "content");
             if (name.isBlank()) {
                 String first = getFieldValue(fields, "FirstName", "content");
@@ -65,12 +77,25 @@ public class AzureDocumentIntelligenceClient {
             }
 
             String dob = getFieldValue(fields, "DateOfBirth", "valueDate");
+            if (dob.isBlank()) {
+                dob = extractDobFromContent(content);
+            }
             String idNumber = getFieldValue(fields, "DocumentNumber", "content");
             String income = isIncome ? getFieldValue(fields, "TotalIncome", "content") : "";
+            IncomeExtraction incomeExtraction = null;
+            if (isIncome && income.isBlank()) {
+                incomeExtraction = extractIncomeFromContent(content);
+                if (incomeExtraction != null) {
+                    income = incomeExtraction.value();
+                }
+            }
 
             double confidence = getFieldConfidence(fields, "DocumentNumber");
             if (confidence == 0.0) {
                 confidence = getFieldConfidence(fields, "FullName");
+            }
+            if (isIncome && (confidence == 0.0 || confidence < 0.9) && incomeExtraction != null) {
+                confidence = incomeExtraction.confidence();
             }
 
             return new DocumentExtractionResult(name, dob, idNumber, income, confidence);
@@ -200,4 +225,47 @@ public class AzureDocumentIntelligenceClient {
         JsonNode valueNode = node.path("confidence");
         return valueNode.isMissingNode() ? 0.0 : valueNode.asDouble(0.0);
     }
+
+    private String extractDobFromContent(String content) {
+        if (content == null || content.isBlank()) {
+            return "";
+        }
+        Pattern pattern = Pattern.compile("(?i)(dob|date of birth)\\D{0,10}(\\d{2}[/-]\\d{2}[/-]\\d{4})");
+        Matcher matcher = pattern.matcher(content);
+        if (matcher.find()) {
+            String raw = matcher.group(2);
+            try {
+                String normalized = raw.replace('-', '/');
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                LocalDate date = LocalDate.parse(normalized, formatter);
+                return date.toString();
+            } catch (Exception e) {
+                return "";
+            }
+        }
+        return "";
+    }
+
+    private IncomeExtraction extractIncomeFromContent(String content) {
+        if (content == null || content.isBlank()) {
+            return null;
+        }
+        String[] patterns = new String[] {
+                "(?i)annual\\s+income\\D{0,12}([0-9][0-9,\\.]{2,})",
+                "(?i)total\\s+income\\D{0,12}([0-9][0-9,\\.]{2,})",
+                "(?i)net\\s+income\\D{0,12}([0-9][0-9,\\.]{2,})",
+                "(?i)income\\s+before\\s+taxes\\D{0,12}([0-9][0-9,\\.]{2,})"
+        };
+        for (String patternText : patterns) {
+            Pattern pattern = Pattern.compile(patternText);
+            Matcher matcher = pattern.matcher(content);
+            if (matcher.find()) {
+                String value = matcher.group(1);
+                return new IncomeExtraction(value, 0.92);
+            }
+        }
+        return null;
+    }
+
+    private record IncomeExtraction(String value, double confidence) {}
 }

@@ -52,10 +52,21 @@ public class BlobStorageService {
         }
     }
 
-    public String buildOnboardingBlobName(String studentId) {
+    public String buildOnboardingBlobName(String studentId, String candidateName) {
         String datePath = DATE_PATH.format(Instant.now());
         String safeStudentId = (studentId == null || studentId.isBlank()) ? "unknown" : studentId.trim();
-        return String.format("onboarding/%s/student-%s-%d.json", datePath, safeStudentId, System.currentTimeMillis());
+        String safeCandidate = slugify(candidateName);
+        return String.format("onboarding/%s/student-%s-%s-%d.json", datePath, safeStudentId, safeCandidate, System.currentTimeMillis());
+    }
+
+    private String slugify(String value) {
+        if (value == null || value.isBlank()) {
+            return "unknown";
+        }
+        String trimmed = value.trim().toLowerCase();
+        String slug = trimmed.replaceAll("[^a-z0-9]+", "-");
+        slug = slug.replaceAll("(^-+|-+$)", "");
+        return slug.isBlank() ? "unknown" : slug;
     }
 
     private BlobContainerClient buildContainerClient(String connectionString, String accountName, String accountKey, String containerName) {
